@@ -1,0 +1,36 @@
+
+.text-container {
+    margin: 10% 0;
+}
+.header-text {
+    font-size: 36px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 20px;
+}
+.subheader-text {
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 40px;
+}
+.button-tentang-kami {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.button-tentang-kami:hover {
+    background-color: #3e8e41;
+}
+.text-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
