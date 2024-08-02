@@ -10,7 +10,7 @@
             <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mt-12 mb-8 three-d-text">JAMINAN KELAS 12</h2>
             <p class="text-2xl sm:text-3xl md:text-4xl font-bold mb-4"><span class="text-[#FF0000]">FREE </span>1 tahun gapyear apabila belum mendapat</p>
             <p class="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">Perguruan Tinggi Negeri</p>
-            <button class="bg-[#DAB93C] hover:bg-[#FFDD5A] text-white font-bold mt-8 py-4 px-6 rounded-full">Daftar Sekarang</button>
+            <button class="bg-[#DAB93C] hover:bg-[#FFDD5A] text-white font-bold mt-8 py-4 px-6 rounded-full">Daftar Sakarang</button>
         </div>
     </div>
 

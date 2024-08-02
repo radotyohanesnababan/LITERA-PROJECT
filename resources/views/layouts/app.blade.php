@@ -18,6 +18,7 @@
         @livewireStyles
     </head>
     <body class="font-sans antialiased">
+        
         <x-banner />
 
         <div class="min-h-screen bg-gray-100">
@@ -39,7 +40,7 @@
         </div>
 
         @stack('modals')
-
         @livewireScripts
+        <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
     </body>
 </html>
