@@ -19,8 +19,16 @@
                         {{ __('Edit Page') }}
                     </x-nav-link>
                     <x-nav-link href="{{ route('staff') }}" :active="request()->routeIs('staff')">
-                        {{ __('Edit Staff') }}
+                        {{ __('Staff') }}
                     </x-nav-link>
+                    <x-nav-link href="{{ route('testi') }}" :active="request()->routeIs('testi')">
+                        {{ __('Testimoni') }}
+                    </x-nav-link>
+                    <x-nav-link href="{{ route('program') }}" :active="request()->routeIs('program')">
+                        {{ __('Program') }}
+                    </x-nav-link>
+                    
+                    
                     
                 </div>
 
