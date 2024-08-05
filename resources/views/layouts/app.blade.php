@@ -16,6 +16,8 @@
 
         <!-- Styles -->
         @livewireStyles
+
+        @notifyCss
     </head>
     <body class="font-sans antialiased">
         
@@ -41,6 +43,8 @@
 
         @stack('modals')
         @livewireScripts
+        <x-notify::notify class="text-black"/>
+        @notifyJs
         <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
     </body>
 </html>
