@@ -7,12 +7,15 @@ use App\Livewire\Tentor;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\StaffController;
 use App\Http\Controllers\TestiController;
+use App\Http\Controllers\ProfilController;
 use App\Livewire\Addtesti;
 use App\Livewire\Editstaff;
 use App\Livewire\Edittesti;
+use App\Livewire\Profilpage;
 use App\Livewire\Programpage;
 use App\Livewire\Staffpage;
 use App\Livewire\Testipage;
+use App\Models\Profil;
 
 Route::get('/', function () {
     return view('welcome');
@@ -27,6 +30,7 @@ Route::get('/editpage', Editpage::class)->name('editpage');
 Route::get('/staffpage', Staffpage::class)->name('staff');
 Route::get('/testipage', Testipage::class)->name('testi');
 Route::get ('/programpage', Programpage::class)->name('program');
+Route::get('/profilpage/data', Profilpage::class)->name('profil');
 
 //route nav-staff
 Route::get('/addstaff', Addstaff::class)->name('addstaff');
@@ -48,6 +52,16 @@ Route::put('/testi/{id}', [TestiController::class, 'editTesti'])->name('editTest
 
 
 //route nav-program
+//Route crud-program
+
+
+//route nav-profil
+//route crud-profil
+Route::put('/profil/{id}', [ProfilController::class, 'editProfil'])->name('editProfil');
+
+
+
+
 
 
 Route::middleware([

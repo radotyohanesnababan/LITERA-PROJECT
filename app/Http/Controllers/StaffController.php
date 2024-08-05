@@ -11,6 +11,7 @@ class StaffController extends Controller
 
     public function addStaff(Request $request)
     {
+        //dd($request->all());
         $request->validate([
             'nama' => 'required|string|max:255',
             'posisi' => 'required|string|max:255',
@@ -34,7 +35,7 @@ class StaffController extends Controller
         return redirect()->route('staff');
     }
 
-    
+
     public function editStaff(Request $request, $id)
     {
         // dd($request->all());
