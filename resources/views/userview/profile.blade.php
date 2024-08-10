@@ -5,11 +5,12 @@
 @endpush
 
 @section('content')
-<body>
+<body class="body">
     <div>
-        <h1>
-            MANAJEMEN
-        </h1>
+        <h1 class="judul text-2xl md:text-4xl lg:text-5xl font-bold text-center py-20 mb-6">MANAJEMEN</h1>
+    </div>
+    <div>
+        <img src="{{ asset('storage/profile/manajemenscontoh.png') }}" alt="">
     </div>
 
     <div class="bg-[#31081F] py-10">
@@ -55,4 +56,6 @@
             </div>
         </div>
     </div>
+
 </body>
+@endsection

@@ -37,6 +37,10 @@ Route::get('/home', function(){
     return view('userview.home');
 });
 
+Route::get('/about', function(){
+    return view('userview.about');
+});
+
 Route::get('/profile', function(){
     return view('userview.profile');
 });
