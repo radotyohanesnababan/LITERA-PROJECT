@@ -8,11 +8,18 @@ use App\Models\Testi;
 class Testipage extends Component
 {
     public $testi = [];
+    public $filteredTesti = [];
     public $currentTesti;
     public $modalVisible = false;
+    public $searchName = '';
+    
 
+    
     //crud-logic
-
+    public function search(){
+        $this->filteredTesti = Testi::where('nama', 'like', '%' . $this->searchName . '%')->get();
+        //dd($this->filteredTesti);
+    }
     public function deleteTesti()
     {
        if($this->currentTesti){
@@ -34,6 +41,7 @@ class Testipage extends Component
 
     public function mount(){
         $this->testi = Testi::all();
+        $this->filteredTesti = $this->testi;
     }
 
     

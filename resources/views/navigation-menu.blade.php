@@ -15,17 +15,20 @@
                     <x-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
-                    <x-nav-link href="{{ route('editpage') }}" :active="request()->routeIs('editpage')">
-                        {{ __('Edit Page') }}
+                    <x-nav-link href="{{ route('program') }}" :active="request()->routeIs('program')">
+                        {{ __('Program') }}
+                    </x-nav-link>
+                    <x-nav-link href="{{ route('kegiatan') }}" :active="request()->routeIs('kegiatan')">
+                        {{ __('Kegiatan') }}
+                    </x-nav-link>
+                    <x-nav-link href="{{ route('metode') }}" :active="request()->routeIs('metode')">
+                        {{ __('Metode') }}
                     </x-nav-link>
                     <x-nav-link href="{{ route('staff') }}" :active="request()->routeIs('staff')">
                         {{ __('Staff') }}
                     </x-nav-link>
                     <x-nav-link href="{{ route('testi') }}" :active="request()->routeIs('testi')">
                         {{ __('Testimoni') }}
-                    </x-nav-link>
-                    <x-nav-link href="{{ route('program') }}" :active="request()->routeIs('program')">
-                        {{ __('Program') }}
                     </x-nav-link>
                     <x-nav-link href="{{ route('profil') }}" :active="request()->routeIs('profil')">
                         {{ __('Profil') }}
