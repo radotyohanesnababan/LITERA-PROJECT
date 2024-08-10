@@ -37,6 +37,10 @@ Route::get('/home', function(){
     return view('userview.home');
 });
 
+Route::get('/profile', function(){
+    return view('userview.profile');
+});
+
 //route admin-area
 Route::get('/editpage', Editpage::class)->name('editpage');
 Route::get('/staffpage', Staffpage::class)->name('staff');
