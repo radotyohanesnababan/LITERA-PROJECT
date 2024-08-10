@@ -1,0 +1,418 @@
+.body{
+    background-color: white;
+}
+.judul1 {
+    color: #31081F;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    font-size: 4rem;
+    text-align: center;
+}
+.isi1 {
+    color: black;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 600;
+    font-size:35px;
+    padding: 2rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    text-align: justify;
+}
+
+.judul2 {
+    color: #31081F;
+    background-color: #EFE6FF;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    font-size: 3rem;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #31081F;
+}
+.isi2 {
+    color: black;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 600;
+    font-size:35px;
+    padding-bottom: 2rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    text-align: center;
+}
+.isi3 {
+    color: black;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 600;
+    font-size:40px;
+    padding-top: 2rem;
+    text-align: center;
+}
+.jarak {
+    margin-left: 7.5rem;
+}
+.list1{
+    color: black;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 600;
+    font-size:35px;
+    padding-left: 2.5rem;
+    padding-right: 5rem;
+    text-align: justify;
+}
+
+.list2{
+    color: black;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 600;
+    font-size:35px;
+    padding-top: 2.5rem;
+    padding-left: 2.5rem;
+    padding-right: 5rem;
+    text-align: justify; 
+}
+.list2 p{
+    margin-left: -5rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+.isi4{
+    color: black;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    right: 0;
+    font-weight: 600;
+    font-size:40px;
+    padding-top: 2rem;
+    text-align: justify;
+}
+
+@media (max-width: 438px) {
+    .judul1 {
+        color: #31081F;
+        font-family: "Montserrat", sans-serif;
+        font-weight: bold;
+        font-size: 1.7rem;
+        text-align: center;
+    }
+    .logo1{
+        width: 250px;
+    }
+    .judul2 {
+        color: #31081F;
+        background-color: #EFE6FF;
+        font-family: "Montserrat", sans-serif;
+        font-weight: bold;
+        font-size: 1.5rem;
+        text-align: center;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        border-bottom: 2px solid #31081F;
+    }
+    .isi1 {
+        color: black;
+        font-family: "Plus Jakarta Sans", sans-serif;
+        font-weight: 600;
+        font-size:12px;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        text-align: justify;
+        align-items: center;
+    }
+    .isi2 {
+        color: black;
+        font-family: "Plus Jakarta Sans", sans-serif;
+        font-weight: 600;
+        font-size:12px;
+        padding-bottom: 2rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        text-align: center;
+    }
+    .isi3 {
+        color: black;
+        font-family: "Plus Jakarta Sans", sans-serif;
+        font-weight: 600;
+        font-size:14px;
+        padding-top: 2rem;
+        text-align: center;
+    }
+    .jarak {
+        margin-left: 2rem;
+    }
+    .list1{
+        color: black;
+        font-family: "Plus Jakarta Sans", sans-serif;
+        font-weight: 600;
+        font-size:12px;
+        padding-right: 1rem;
+        text-align: justify;
+    }
+    .list2{
+        color: black;
+        font-family: "Plus Jakarta Sans", sans-serif;
+        font-weight: 600;
+        font-size:12px;
+        padding-right: 1rem;
+        text-align: justify; 
+    }
+    .list2 p{
+        margin-left: -3.5rem;
+    }
+    .isi4{
+        color: black;
+        font-family: "Plus Jakarta Sans", sans-serif;
+        right: 0;
+        font-weight: 600;
+        font-size:40px;
+        text-align: justify;
+    }
+} 
+@media (max-width: 759px) {
+    .judul1 {
+        color: #31081F;
+        font-family: "Montserrat", sans-serif;
+        font-weight: bold;
+        font-size: 2rem;
+        text-align: center;
+    }
+    .logo1{
+        width: 300px;
+    }
+    .judul2 {
+        color: #31081F;
+        background-color: #EFE6FF;
+        font-family: "Montserrat", sans-serif;
+        font-weight: bold;
+        font-size: 1.8rem;
+        text-align: center;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        border-bottom: 2px solid #31081F;
+    }
+    .isi1 {
+        color: black;
+        font-family: "Plus Jakarta Sans", sans-serif;
+        font-weight: 600;
+        font-size:15px;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        text-align: justify;
+        align-items: center;
+    }
+    .isi2 {
+        color: black;
+        font-family: "Plus Jakarta Sans", sans-serif;
+        font-weight: 600;
+        font-size:15px;
+        padding-bottom: 2rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        text-align: center;
+    }
+    .isi3 {
+        color: black;
+        font-family: "Plus Jakarta Sans", sans-serif;
+        font-weight: 600;
+        font-size:18px;
+        padding-top: 2rem;
+        text-align: center;
+    }
+    .jarak {
+        margin-left: 2rem;
+    }
+    .list1{
+        color: black;
+        font-family: "Plus Jakarta Sans", sans-serif;
+        font-weight: 600;
+        font-size:15px;
+        padding-right: 1rem;
+        text-align: justify;
+    }
+    .list2{
+        color: black;
+        font-family: "Plus Jakarta Sans", sans-serif;
+        font-weight: 600;
+        font-size:15px;
+        padding-right: 1rem;
+        text-align: justify; 
+    }
+    .list2 p{
+        margin-left: -3.5rem;
+    }
+    .isi4{
+        color: black;
+        font-family: "Plus Jakarta Sans", sans-serif;
+        right: 0;
+        font-weight: 600;
+        font-size:40px;
+        text-align: justify;
+    }
+} 
+@media (max-width: 920px) {
+    .judul1 {
+        color: #31081F;
+        font-family: "Montserrat", sans-serif;
+        font-weight: bold;
+        font-size: 3rem;
+        text-align: center;
+    }
+    .logo1{
+        width: 500px;
+    }
+    .judul2 {
+        color: #31081F;
+        background-color: #EFE6FF;
+        font-family: "Montserrat", sans-serif;
+        font-weight: bold;
+        font-size: 2.5rem;
+        text-align: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #31081F;
+    }
+    .isi1 {
+        color: black;
+        font-family: "Plus Jakarta Sans", sans-serif;
+        font-weight: 600;
+        font-size:20px;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        text-align: justify;
+        align-items: center;
+    }
+    .isi2 {
+        color: black;
+        font-family: "Plus Jakarta Sans", sans-serif;
+        font-weight: 600;
+        font-size:20px;
+        padding-bottom: 2rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        text-align: center;
+    }
+    .isi3 {
+        color: black;
+        font-family: "Plus Jakarta Sans", sans-serif;
+        font-weight: 600;
+        font-size:25px;
+        padding-top: 2rem;
+        text-align: center;
+    }
+    .jarak {
+        margin-left: 3.5rem;
+    }
+    .list1{
+        color: black;
+        font-family: "Plus Jakarta Sans", sans-serif;
+        font-weight: 600;
+        font-size:20px;
+        padding-right: 2rem;
+        text-align: justify;
+    }
+    .list2{
+        color: black;
+        font-family: "Plus Jakarta Sans", sans-serif;
+        font-weight: 600;
+        font-size:20px;
+        padding-right: 2rem;
+        text-align: justify; 
+    }
+    .list2 p{
+        margin-left: -4rem;
+    }
+    .isi4{
+        color: black;
+        font-family: "Plus Jakarta Sans", sans-serif;
+        right: 0;
+        font-weight: 600;
+        font-size:40px;
+        text-align: justify;
+    }
+} 
+@media (max-width: 1024px) {
+    .judul1 {
+        color: #31081F;
+        font-family: "Montserrat", sans-serif;
+        font-weight: bold;
+        font-size: 3.5rem;
+        text-align: center;
+    }
+    .isi1 {
+        color: black;
+        font-family: "Plus Jakarta Sans", sans-serif;
+        font-weight: 600;
+        font-size:30px;
+        padding: 2rem;
+        padding-left: 3rem;
+        padding-right: 3rem;
+        text-align: justify;
+    }
+
+    .judul2 {
+        color: #31081F;
+        background-color: #EFE6FF;
+        font-family: "Montserrat", sans-serif;
+        font-weight: bold;
+        font-size: 2.5rem;
+        text-align: center;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        border-bottom: 2px solid #31081F;
+    }
+    .isi2 {
+        color: black;
+        font-family: "Plus Jakarta Sans", sans-serif;
+        font-weight: 600;
+        font-size:30px;
+        padding-bottom: 2rem;
+        padding-left: 3rem;
+        padding-right: 3rem;
+        text-align: center;
+    }
+    .isi3 {
+        color: black;
+        font-family: "Plus Jakarta Sans", sans-serif;
+        font-weight: 600;
+        font-size:40px;
+        padding-top: 2rem;
+        text-align: center;
+    }
+    .jarak {
+        margin-left: 6rem;
+    }
+    .list1{
+        color: black;
+        font-family: "Plus Jakarta Sans", sans-serif;
+        font-weight: 600;
+        font-size:30px;
+        padding-left: 2.5rem;
+        padding-right: 5rem;
+        text-align: justify;
+    }
+
+    .list2{
+        color: black;
+        font-family: "Plus Jakarta Sans", sans-serif;
+        font-weight: 600;
+        font-size:30px;
+        padding-top: 2.5rem;
+        padding-left: 2.5rem;
+        padding-right: 3rem;
+        text-align: justify; 
+    }
+    .list2 p{
+        margin-left: -4.5rem;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+    }
+    .isi4{
+        color: black;
+        font-family: "Plus Jakarta Sans", sans-serif;
+        right: 0;
+        font-weight: 600;
+        font-size:40px;
+        padding-top: 2rem;
+        text-align: justify;
+    }
+} 
+
