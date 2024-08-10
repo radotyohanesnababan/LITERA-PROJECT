@@ -29,11 +29,8 @@ use App\Livewire\Metodepage;
 use App\Models\Kegiatan;
 use App\Models\Profil;
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
-Route::get('/home', function(){
+Route::get('/', function(){
     return view('userview.home');
 });
 

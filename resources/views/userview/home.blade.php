@@ -1,4 +1,3 @@
-
 @extends('userview.index')
 @section('content')
 <body class="bg-white">
