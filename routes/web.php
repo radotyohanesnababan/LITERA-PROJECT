@@ -11,6 +11,8 @@ use App\Http\Controllers\TestiController;
 use App\Http\Controllers\ProfilController;
 use App\Http\Controllers\MetodeController;
 use App\Http\Controllers\ProgramController;
+use App\Http\Controllers\ViewHomeController;
+use App\Http\Controllers\ViewAboutController;
 use App\Livewire\Addkegiatan;
 use App\Livewire\Addtesti;
 use App\Livewire\Addmetode;
@@ -30,13 +32,16 @@ use App\Models\Kegiatan;
 use App\Models\Profil;
 
 
-Route::get('/', function(){
-    return view('userview.home');
-});
+// Route::get('/', function(){
+//     return view('userview.home');
+// });
 
-Route::get('/about', function(){
-    return view('userview.about');
-});
+Route::get('/', [ViewHomeController::class, 'index'])->name('home');
+
+// Route::get('/about', function(){
+//     return view('userview.about');
+// });
+Route::get('/about', [ViewAboutController::class, 'index'])->name('about');
 
 Route::get('/profile', function(){
     return view('userview.profile');
@@ -102,10 +107,6 @@ Route::get ('/editmetode/{id}', Editmetode::class)->name('editmetode');
 //route crud-metode
 Route::post('/metode', [MetodeController::class, 'addMetode'])->name('addMetode');
 Route::put('/metode/{id}', [MetodeController::class, 'editMetode'])->name('editMetode');
-
-
-
-
 
 
 

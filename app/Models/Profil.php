@@ -11,6 +11,6 @@ class Profil extends Model
     protected $table = "profil";
     protected $primaryKey = 'id';
     protected $fillable = [
-        'artinama','sejarah','visimisi','unggulan','instagram_link','whatsapp_link','alamat'
+        'artinama','sejarah','visi','misi','unggulan','instagram_link','whatsapp_link','alamat'
     ];
 }

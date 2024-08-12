@@ -39,7 +39,7 @@
                                     <div class="avatar">
                                         <div class="mask mask-squircle h-12 w-12">
                                             
-                                            <img src="{{ asset('storage/foto/' . $item->foto) }}"
+                                            <img src="{{ asset('storage/kegiatan/' . $item->foto) }}"
                                                 alt="Avatar Tailwind CSS Component" />
                                         </div>
                                     </div>
@@ -93,7 +93,7 @@
             </table>
             <div class="flex justify-end mt-2">
                 <button class= "btn btn-outline btn-primary mb-2 "
-                    onclick="window.location.href='{{ route('addkegiatan') }}'">Tambah Testimoni</button>
+                    onclick="window.location.href='{{ route('addkegiatan') }}'">Tambah Kegiatan</button>
             </div>
         </div>
     </div>

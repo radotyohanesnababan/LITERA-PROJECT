@@ -39,7 +39,7 @@
                                     <div class="avatar">
                                         <div class="mask mask-squircle h-12 w-12">
                                             
-                                            <img src="{{ asset('storage/foto/' . $item->foto) }}"
+                                            <img src="{{ asset('storage/metode/' . $item->foto) }}"
                                                 alt="Avatar Tailwind CSS Component" />
                                         </div>
                                     </div>

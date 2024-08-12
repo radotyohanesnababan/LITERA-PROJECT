@@ -9,29 +9,48 @@ class KegiatanController extends Controller
 {
     public function addKegiatan(Request $request)
     {
-        //dd($request->all());
+        // Validasi input
         $request->validate([
             'deskripsi' => 'required|string|max:255',
             'foto' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048'
         ]);
 
+        // Inisialisasi variabel $fotoname
+        $fotoname = '';
+
+        // Periksa apakah ada file yang diunggah
         if ($request->hasFile('foto')) {
             $foto = $request->file('foto');
             $fotoname = time() . '.' . $foto->getClientOriginalExtension();
-            $foto->storeAs('public/foto', $fotoname);
+            
+            $stored = $foto->storeAs('public/kegiatan', $fotoname);
+            // if ($stored) {
+            //     dd('File stored at: ' . $stored);
+            // } else {
+            //     dd('File could not be stored.');
+            // }
         }
+        
 
+        // Buat instance baru dari model Kegiatan
         $kegiatan = new Kegiatan();
         $kegiatan->deskripsi = $request->deskripsi;
-        $kegiatan->foto = $fotoname;
-        $kegiatan->save();
+        $kegiatan->foto = $fotoname; // Simpan nama file ke dalam kolom 'foto' di database
+        $kegiatan->save(); // Simpan data ke database
+
+        
+
+        // Tampilkan notifikasi sukses
         notify()->success('Data kegiatan ditambahkan');
+
+        // Redirect ke halaman daftar kegiatan
         return redirect()->route('kegiatan');
     }
+
     public function editKegiatan(Request $request, $id)
     {
         $kegiatan = Kegiatan::findOrFail($id);
-        //dd($request->all());
+        dd($request->all());
         $request->validate([
             'deskripsi' => 'required|string|max:255',
             'foto' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048'
@@ -40,7 +59,7 @@ class KegiatanController extends Controller
         if ($request->hasFile('foto')) {
             $foto = $request->file('foto');
             $fotoname = time() . '.' . $foto->getClientOriginalExtension();
-            $foto->storeAs('public/foto', $fotoname);
+            $foto->storeAs('public/kegiatan', $fotoname);
         }
 
         $kegiatan->deskripsi = $request->deskripsi;

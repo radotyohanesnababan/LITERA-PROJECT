@@ -35,7 +35,6 @@
                         <button wire:click="switchPage('artinama-table')">
                             <a href="#"
                                 class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-                                
                                 <span class="ms-3">Arti Nama</span>
                             </a>
                         </button>
@@ -152,18 +151,30 @@
             @if ($activePage == 'visimisi-table')
                 <div class="p-4 sm:p-6 lg:p-8 mx-auto w-full">
                     <form wire:submit.prevent="updateVisimisi">
-                        <div
-                            class="w-full mb-4 border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-700 dark:border-gray-600">
-                            <div class=" flex justify-start px-3 py-2 border-b dark:border-gray-600">
-                                <div type="text" class=" flex  just p-2 text-gray-500 sm:ms-auto ">
-                                    Visi dan Misi
+                        <div class="w-full mb-4 border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-700 dark:border-gray-600">
+                            <div class="flex justify-start px-3 py-2 border-b dark:border-gray-600">
+                                <div class="flex p-2 text-gray-500 sm:ms-auto">
+                                    Visi
                                 </div>
                             </div>
                             <div class="px-4 py-2 bg-white rounded-b-lg dark:bg-gray-800">
-                                <label for="editor" class="sr-only">visi dan Misi</label>
-                                <textarea id="visimisi" rows="8" wire:model.defer="visimisi"
+                                <label for="visi" class="sr-only">Visi</label>
+                                <textarea id="visi" name="visi" rows="8" wire:model.defer="visi"
                                     class="block w-full px-0 text-sm text-gray-800 bg-white border-0 dark:bg-gray-800 focus:ring-0 dark:text-white dark:placeholder-gray-400"
-                                    required>{{ $profil->visimisi }}</textarea>
+                                    required>{{ $profil->visi }}</textarea>
+                            </div>
+                        </div>
+                        <div class="w-full mb-4 border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-700 dark:border-gray-600">
+                            <div class="flex justify-start px-3 py-2 border-b dark:border-gray-600">
+                                <div class="flex p-2 text-gray-500 sm:ms-auto">
+                                    Misi
+                                </div>
+                            </div>
+                            <div class="px-4 py-2 bg-white rounded-b-lg dark:bg-gray-800">
+                                <label for="misi" class="sr-only">Misi</label>
+                                <textarea id="misi" name="misi" rows="8" wire:model.defer="misi"
+                                    class="block w-full px-0 text-sm text-gray-800 bg-white border-0 dark:bg-gray-800 focus:ring-0 dark:text-white dark:placeholder-gray-400"
+                                    required>{{ $profil->misi }}</textarea>
                             </div>
                         </div>
                         <button type="submit"
@@ -171,6 +182,7 @@
                             Edit Visi dan Misi
                         </button>
                     </form>
+                    
                 </div>
             @endif
 
@@ -217,8 +229,8 @@
                                     required />
                             </div>
                             <div class="m-5">
-                                <label for="instagram_link" class="block mb-2 text-sm font-bold text-gray-900 dark:text-white">Link Whatsapp</label>
-                                <input  wire:model.defer="whatsapp_link" type="instagram_link" id="instagram_link" name="instagram_link" value="{{ $profil->whatsapp_link }}"
+                                <label for="whatsapp_link" class="block mb-2 text-sm font-bold text-gray-900 dark:text-white">Link Whatsapp</label>
+                                <input  wire:model.defer="whatsapp_link" type="whatsapp_link" id="whatsapp_link" name="whatsapp_link" value="{{ $profil->whatsapp_link }}"
                                     class="shadow-sm bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
                                     required />
                             </div>    

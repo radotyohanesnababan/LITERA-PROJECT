@@ -18,7 +18,7 @@ class MetodeController extends Controller
         if ($request->hasFile('foto')) {
             $foto = $request->file('foto');
             $fotoname = time() . '.' . $foto->getClientOriginalExtension();
-            $foto->storeAs('public/foto', $fotoname);
+            $foto->storeAs('public/metode', $fotoname);
         }
 
         $metode = new Metode();
@@ -40,7 +40,7 @@ class MetodeController extends Controller
         if ($request->hasFile('foto')) {
             $foto = $request->file('foto');
             $fotoname = time() . '.' . $foto->getClientOriginalExtension();
-            $foto->storeAs('public/foto', $fotoname);
+            $foto->storeAs('public/metode', $fotoname);
         }
 
         $metode->deskripsi = $request->deskripsi;
