@@ -1,9 +1,10 @@
 @extends('userview.index')
 
 @push('styles')
-    <link href="{{ asset('css/about.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('css/about.css') }}" type="text/css">
 @endpush
 @section('content')
+    <link rel="stylesheet" href="{{ asset('css/about.css') }}" type="text/css">
     @if ($profil)
 
         <body class="body">
@@ -59,7 +60,7 @@
                         <li class="list1">
                             {!! $profil->misi !!}
                         </li>
-                        
+
                     </ul>
                 </div>
             </div>
