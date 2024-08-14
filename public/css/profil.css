@@ -1,0 +1,20 @@
+.body{
+    background-color: white;
+}
+.judul {
+    color:white;
+    font-family: "Montserrat", sans-serif;
+}
+
+.k-size1 {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background-color: #A79EAF;
+    overflow: hidden; /* Menyembunyikan bagian gambar yang melebihi batas bulat */
+}
+.k-size2 { 
+    height: 180px; /* Menyesuaikan tinggi gambar dengan tinggi kontainer */
+    width: auto;  /* Menyesuaikan lebar gambar dengan lebar kontainer */
+    object-fit: cover; /* Memastikan gambar menutupi seluruh area kontainer */
+}
