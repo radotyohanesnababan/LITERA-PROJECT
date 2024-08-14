@@ -44,6 +44,7 @@ class Profilpage extends Component
         $profil->artinama = $this->artinama;
         $profil->save();
         notify()->success('Data artinama diubah');
+        
 
         return redirect()->route('profil');
     }
@@ -118,9 +119,6 @@ class Profilpage extends Component
         return redirect()->route('profil');
     }
 
-
-
-
     public function fetchProfil()
     {
         $this->profil = Profil::first();
@@ -132,5 +130,6 @@ class Profilpage extends Component
     public function switchPage($page)
     {
         $this->activePage = $page;
+       
     }
 }

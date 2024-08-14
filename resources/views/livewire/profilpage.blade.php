@@ -45,9 +45,9 @@
                         <button wire:click="switchPage('sejarah-table')">
                             <a href="#"
                                 class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-                                
+
                                 <span class="flex-1 ms-3 whitespace-nowrap">Sejarah </span>
-                                
+
                             </a>
                         </button>
 
@@ -56,9 +56,9 @@
                         <button wire:click="switchPage('visimisi-table')">
                             <a href="#"
                                 class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-                                
+
                                 <span class="flex-1 ms-3 whitespace-nowrap">Visi dan Misi</span>
-                                
+
                             </a>
                         </button>
 
@@ -68,7 +68,7 @@
                         <button wire:click="switchPage('unggulan-table')">
                             <a href="#"
                                 class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-                                
+
                                 <span class="flex-1 ms-3 whitespace-nowrap">Unggulan</span>
                             </a>
                         </button>
@@ -78,7 +78,7 @@
                         <li>
                             <a href="#"
                                 class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-                                
+
                                 <span class="flex-1 ms-3 whitespace-nowrap"> Media Sosial</span>
                             </a>
                         </li>
@@ -87,7 +87,7 @@
                         <button wire:click="switchPage('alamat-table')">
                             <a href="#"
                                 class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-                                
+
                                 <span class="flex-1 ms-3 whitespace-nowrap">Alamat</span>
                             </a>
                         </button>
@@ -99,25 +99,16 @@
         @if ($profil)
             @if ($activePage == 'artinama-table')
                 <div class="p-4 sm:p-6 lg:p-8 mx-auto w-full">
-
                     <form wire:submit.prevent="updateArtinama">
-                        <div
-                            class="w-full mb-4 border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-700 dark:border-gray-600">
-                            <div class=" flex justify-start px-3 py-2 border-b dark:border-gray-600">
-                                <div type="text" class=" flex  just p-2 text-gray-500 sm:ms-auto ">
-                                    Arti Nama
-                                </div>
-                            </div>
-                            <div class="px-4 py-2 bg-white rounded-b-lg dark:bg-gray-800">
-                                <label for="artinama" class="sr-only">Arti Nama</label>
-                                <textarea id="artinama" rows="8" wire:model.defer="artinama" 
-                                    class="block w-full px-0 text-sm text-gray-800 bg-white border-0 dark:bg-gray-800 focus:ring-0 dark:text-white dark:placeholder-gray-400"
-                                    required>{{ $profil->artinama }}</textarea>
-                            </div>
+                        <div x-data="summernoteInit_artinama()" x-init="initializeSummernote_artinama()" wire:ignore class="mb-4">
+                            <textarea id="artinama" wire:model.defer="artinama">
+                                {{ $profil->artinama }}
+                            </textarea>
                         </div>
                         <button type="submit"
-                            class="inline-flex items-center px-5 py-2.5 text-sm font-medium text-center text-white bg-blue-700 rounded-lg focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-900 hover:bg-blue-800">
-                            Edit Arti Nama
+                            class="inline-flex items-center px-5 py-2.5 text-sm font-medium text-center text-white bg-blue-700 rounded-lg focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-900 hover:bg-blue-800"
+                            x-on:click="syncSummernoteWithLivewire">
+                            Edit Artinama
                         </button>
                     </form>
                 </div>
@@ -126,19 +117,10 @@
             @if ($activePage == 'sejarah-table')
                 <div class="p-4 sm:p-6 lg:p-8 mx-auto w-full">
                     <form wire:submit.prevent="updateSejarah">
-                        <div
-                            class="w-full mb-4 border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-700 dark:border-gray-600">
-                            <div class=" flex justify-start px-3 py-2 border-b dark:border-gray-600">
-                                <div type="text" class=" flex  just p-2 text-gray-500 sm:ms-auto ">
-                                    Sejarah
-                                </div>
-                            </div>
-                            <div class="px-4 py-2 bg-white rounded-b-lg dark:bg-gray-800">
-                                <label for="editor" class="sr-only">Sejarah</label>
-                                <textarea id="sejarah" rows="8" wire:model.defer="sejarah"
-                                    class="block w-full px-0 text-sm text-gray-800 bg-white border-0 dark:bg-gray-800 focus:ring-0 dark:text-white dark:placeholder-gray-400"
-                                    required>{{ $profil->sejarah }}</textarea>
-                            </div>
+                        <div x-data="summernoteInit_sejarah()" x-init="initializeSummernote_sejarah()" wire:ignore class="mb-4">
+                            <textarea id="sejarah" wire:model.defer="sejarah">
+                                {{ $profil->sejarah }}
+                            </textarea>
                         </div>
                         <button type="submit"
                             class="inline-flex items-center px-5 py-2.5 text-sm font-medium text-center text-white bg-blue-700 rounded-lg focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-900 hover:bg-blue-800">
@@ -151,30 +133,20 @@
             @if ($activePage == 'visimisi-table')
                 <div class="p-4 sm:p-6 lg:p-8 mx-auto w-full">
                     <form wire:submit.prevent="updateVisimisi">
-                        <div class="w-full mb-4 border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-700 dark:border-gray-600">
-                            <div class="flex justify-start px-3 py-2 border-b dark:border-gray-600">
-                                <div class="flex p-2 text-gray-500 sm:ms-auto">
-                                    Visi
-                                </div>
-                            </div>
-                            <div class="px-4 py-2 bg-white rounded-b-lg dark:bg-gray-800">
-                                <label for="visi" class="sr-only">Visi</label>
-                                <textarea id="visi" name="visi" rows="8" wire:model.defer="visi"
-                                    class="block w-full px-0 text-sm text-gray-800 bg-white border-0 dark:bg-gray-800 focus:ring-0 dark:text-white dark:placeholder-gray-400"
-                                    required>{{ $profil->visi }}</textarea>
+                        <div
+                            class="w-full mb-4 border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-700 dark:border-gray-600">
+                            <div x-data="summernoteInit_visi()" x-init="initializeSummernote_visi()" wire:ignore class="mb-4">
+                                <textarea id="visi" wire:model.defer="visi">
+                                    {{ $profil->visi }}
+                                </textarea>
                             </div>
                         </div>
-                        <div class="w-full mb-4 border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-700 dark:border-gray-600">
-                            <div class="flex justify-start px-3 py-2 border-b dark:border-gray-600">
-                                <div class="flex p-2 text-gray-500 sm:ms-auto">
-                                    Misi
-                                </div>
-                            </div>
-                            <div class="px-4 py-2 bg-white rounded-b-lg dark:bg-gray-800">
-                                <label for="misi" class="sr-only">Misi</label>
-                                <textarea id="misi" name="misi" rows="8" wire:model.defer="misi"
-                                    class="block w-full px-0 text-sm text-gray-800 bg-white border-0 dark:bg-gray-800 focus:ring-0 dark:text-white dark:placeholder-gray-400"
-                                    required>{{ $profil->misi }}</textarea>
+                        <div
+                            class="w-full mb-4 border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-700 dark:border-gray-600">
+                            <div x-data="summernoteInit_misi()" x-init="initializeSummernote_misi()" wire:ignore class="mb-4">
+                                <textarea id="misi" wire:model.defer="misi">
+                                    {{ $profil->misi }}
+                                </textarea>
                             </div>
                         </div>
                         <button type="submit"
@@ -182,7 +154,7 @@
                             Edit Visi dan Misi
                         </button>
                     </form>
-                    
+
                 </div>
             @endif
 
@@ -192,16 +164,10 @@
                     <form wire:submit.prevent="updateUnggulan">
                         <div
                             class="w-full mb-4 border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-700 dark:border-gray-600">
-                            <div class=" flex justify-start px-3 py-2 border-b dark:border-gray-600">
-                                <div type="text" class=" flex  just p-2 text-gray-500 sm:ms-auto ">
-                                    Program Unggulan
-                                </div>
-                            </div>
-                            <div class="px-4 py-2 bg-white rounded-b-lg dark:bg-gray-800">
-                                <label for="editor" class="sr-only">Program Unggulan</label>
-                                <textarea id="unggulan" rows="8" wire:model.defer="unggulan"
-                                    class="block w-full px-0 text-sm text-gray-800 bg-white border-0 dark:bg-gray-800 focus:ring-0 dark:text-white dark:placeholder-gray-400"
-                                    required>{{ $profil->unggulan }}</textarea>
+                            <div x-data="summernoteInit_unggulan()" x-init="initializeSummernote_unggulan()" wire:ignore class="mb-4">
+                                <textarea id="unggulan" wire:model.defer="unggulan">
+                                    {{ $profil->unggulan }}
+                                </textarea>
                             </div>
                         </div>
                         <button type="submit"
@@ -223,17 +189,23 @@
                                 </div>
                             </div>
                             <div class="m-5">
-                                <label for="whatsapp_link" class=" font-bold block mb-2 text-sm  text-gray-900 dark:text-white">Link Instagram</label>
-                                <input wire:model.defer="instagram_link" type="whatsapp_link" id="whatsapp_link" name="whatsapp_link" value="{{ $profil->instagram_link }}" 
+                                <label for="whatsapp_link"
+                                    class=" font-bold block mb-2 text-sm  text-gray-900 dark:text-white">Link
+                                    Instagram</label>
+                                <input wire:model.defer="instagram_link" type="whatsapp_link" id="whatsapp_link"
+                                    name="whatsapp_link" value="{{ $profil->instagram_link }}"
                                     class=" bg-white shadow-sm border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
                                     required />
                             </div>
                             <div class="m-5">
-                                <label for="whatsapp_link" class="block mb-2 text-sm font-bold text-gray-900 dark:text-white">Link Whatsapp</label>
-                                <input  wire:model.defer="whatsapp_link" type="whatsapp_link" id="whatsapp_link" name="whatsapp_link" value="{{ $profil->whatsapp_link }}"
+                                <label for="whatsapp_link"
+                                    class="block mb-2 text-sm font-bold text-gray-900 dark:text-white">Link
+                                    Whatsapp</label>
+                                <input wire:model.defer="whatsapp_link" type="whatsapp_link" id="whatsapp_link"
+                                    name="whatsapp_link" value="{{ $profil->whatsapp_link }}"
                                     class="shadow-sm bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
                                     required />
-                            </div>    
+                            </div>
                         </div>
 
                         <button type="submit"
@@ -246,7 +218,7 @@
 
             @if ($activePage == 'alamat-table')
                 <div class="p-4 sm:p-6 lg:p-8 mx-auto w-full">
-                    <form wire:submit.prevent="updateAlamat"> 
+                    <form wire:submit.prevent="updateAlamat">
                         <div
                             class="w-full mb-4 border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-700 dark:border-gray-600">
                             <div class=" flex justify-start px-3 py-2 border-b dark:border-gray-600">
@@ -278,3 +250,151 @@
 
 
     </div>
+
+    @push('scripts')
+        <script>
+            function summernoteInit_artinama() {
+                return {
+                    initializeSummernote_artinama() {
+                        $('#artinama').summernote({
+                            placeholder: 'Hello stand alone ui',
+                            tabsize: 2,
+                            height: 120,
+                            toolbar: [
+                                ['font', ['bold', 'underline', 'clear']],
+                                ['color', ['color']],
+                                ['para', ['ul', 'ol', 'paragraph']],
+                                ['insert', ['link', 'picture', 'video']],
+                               
+                            ],
+                            callbacks: {
+                                onChange: function(contents, $editable) {
+                                    @this.set('artinama', contents);
+                                }
+                            }
+                        });
+                    },
+                    syncSummernoteWithLivewire() {
+                        // Update Livewire variable with Summernote content before submit
+                        let content = $('#artinama').val();
+                        @this.set('artinama', content);
+                    }
+                }
+            }
+
+            function summernoteInit_sejarah() {
+                return {
+                    initializeSummernote_sejarah() {
+                        $('#sejarah').summernote({
+                            placeholder: 'Hello stand alone ui',
+                            tabsize: 2,
+                            height: 120,
+                            toolbar: [
+                                ['font', ['bold', 'underline', 'clear']],
+                                ['color', ['color']],
+                                ['para', ['ul', 'ol', 'paragraph']],
+                                ['insert', ['link', 'picture', 'video']],
+                            ],
+                            callbacks: {
+                                onChange: function(contents, $editable) {
+                                    @this.set('sejarah', contents);
+                                }
+                            }
+                        });
+                    },
+                    syncSummernoteWithLivewire() {
+                        // Update Livewire variable with Summernote content before submit
+                        let content = $('#sejarah').val();
+                        @this.set('sejarah', content);
+                    }
+                }
+            }
+
+            function summernoteInit_visi() {
+                return {
+                    initializeSummernote_visi() {
+                        $('#visi').summernote({
+                            placeholder: 'Hello stand alone ui',
+                            tabsize: 2,
+                            height: 120,
+                            toolbar: [
+                                ['font', ['bold', 'underline', 'clear']],
+                                ['color', ['color']],
+                                ['para', ['ul', 'ol', 'paragraph']],
+                                ['insert', ['link', 'picture', 'video']],
+                               
+                            ],
+                            callbacks: {
+                                onChange: function(contents, $editable) {
+                                    @this.set('visi', contents);
+                                }
+                            }
+                        });
+                    },
+                    syncSummernoteWithLivewire() {
+                        // Update Livewire variable with Summernote content before submit
+                        let content = $('#visi').val();
+                        @this.set('visi', content);
+                    }
+                }
+            }
+
+            function summernoteInit_misi() {
+                return {
+                    initializeSummernote_misi() {
+                        $('#misi').summernote({
+                            placeholder: 'Hello stand alone ui',
+                            tabsize: 2,
+                            height: 120,
+                            toolbar: [
+                                ['font', ['bold', 'underline', 'clear']],
+                                ['color', ['color']],
+                                ['para', ['ul', 'ol', 'paragraph']],
+                                ['insert', ['link', 'picture', 'video']],
+                               
+                            ],
+                            callbacks: {
+                                onChange: function(contents, $editable) {
+                                    @this.set('misi', contents);
+                                }
+                            }
+                        });
+                    },
+                    syncSummernoteWithLivewire() {
+                        // Update Livewire variable with Summernote content before submit
+                        let content = $('#misi').val();
+                        @this.set('misi', content);
+                    }
+                }
+            }
+
+            function summernoteInit_unggulan() {
+                return {
+                    initializeSummernote_unggulan() {
+                        $('#unggulan').summernote({
+                            placeholder: 'Hello stand alone ui',
+                            tabsize: 2,
+                            height: 120,
+                            toolbar: [
+                                ['font', ['bold', 'underline', 'clear']],
+                                ['color', ['color']],
+                                ['para', ['ul', 'ol', 'paragraph']],
+                                ['insert', ['link', 'picture', 'video']],
+                               
+                            ],
+                            callbacks: {
+                                onChange: function(contents, $editable) {
+                                    @this.set('unggulan', contents);
+                                }
+                            }
+                        });
+                    },
+                    syncSummernoteWithLivewire() {
+                        // Update Livewire variable with Summernote content before submit
+                        let content = $('#unggulan').val();
+                        @this.set('unggulan', content);
+                    }
+                }
+            }
+        </script>
+    @endpush
