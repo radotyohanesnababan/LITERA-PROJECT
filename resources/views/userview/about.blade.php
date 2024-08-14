@@ -21,7 +21,7 @@
                 </div>
                 <div>
                     <p class="isi1">
-                        {{ $profil->artinama }}
+                        {!! $profil->artinama !!}
                     </p>
                 </div>
             </div>
@@ -33,7 +33,7 @@
                 </div>
                 <div>
                     <p class="isi1">
-                        {{ $profil->sejarah }}
+                        {!! $profil->sejarah !!}
                     </p>
                 </div>
             </div>
@@ -47,7 +47,7 @@
                     <h2 class="isi3">
                         Visi:
                     </h2>
-                    <p class="isi2">
+                    <p class="isi1">
                         "Menjadikan siswa/i berprestasi dari segala aspek pembelajaran dengan berimajinasi, kreatifitas, dan
                         memiliki kepribadian yang baik dalam bersosialisasi dan komunikasi."
                     </p>
@@ -57,18 +57,9 @@
                     </h2>
                     <ul class="jarak list-disc">
                         <li class="list1">
-                            Menyediakan tutor berkualitas tinggi yang ideal untuk mendukung pencapaian akademik siswa.
+                            {!! $profil->misi !!}
                         </li>
-                        <li class="list1">
-                            Menyajikan materi pembelajaran dengan cara yang mudah dipahami dan cepat diserap oleh siswa.
-                        </li>
-                        <li class="list1">
-                            Memberikan layanan yang nyaman dan ramah, menciptakan suasana belajar yang menyerupai kenyamanan
-                            belajar di rumah.
-                        </li>
-                        <li class="list1">
-                            Menawarkan konsultasi terkait materi pelajaran dan tugas rumah untuk mendukung pemahaman siswa.
-                        </li>
+                        
                     </ul>
                 </div>
             </div>
