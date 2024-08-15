@@ -1,16 +1,13 @@
 @extends('userview.index')
 
-@push('styles')
-    <link rel="stylesheet" href="{{ asset('css/about.css') }}" type="text/css">
-@endpush
+
 @section('content')
-    <link rel="stylesheet" href="{{ asset('css/about.css') }}" type="text/css">
     @if ($profil)
 
         <body class="body">
             <div class="flex items-center justify-center py-10 xl:py-20">
                 <div class="text-center">
-                    <h1 class="judul1">Tentang Kami</h1>
+                    <p class="judul1">Tentang Kami</p>
                     <img src="{{ asset('storage/Logo2.svg') }}" class="logo1 mt-4 mx-auto" alt="Logo">
                 </div>
             </div>
