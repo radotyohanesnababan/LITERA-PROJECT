@@ -1,3 +1,4 @@
+@section('title', 'Galeri | LITERA Admin')
 <div>
     <x-slot name="header">
         <div class="sm:rounded-lg w-auto bg-slate-200 mx-auto">
