@@ -33,6 +33,10 @@
                     <x-nav-link href="{{ route('profil') }}" :active="request()->routeIs('profil')">
                         {{ __('Profil') }}
                     </x-nav-link>
+                    <x-nav-link href="{{ route('galeri') }}" :active="request()->routeIs('galeri')">
+                        {{ __('Galeri') }}
+                    </x-nav-link>
+
 
                     
                     
