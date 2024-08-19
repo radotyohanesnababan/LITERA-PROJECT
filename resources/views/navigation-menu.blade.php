@@ -37,10 +37,6 @@
                         {{ __('Galeri') }}
                     </x-nav-link>
 
-
-                    
-                    
-                    
                 </div>
 
             </div>

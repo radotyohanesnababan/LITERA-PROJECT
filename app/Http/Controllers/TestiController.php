@@ -57,8 +57,10 @@ class TestiController extends Controller
             'universitas' => 'required|string|max:255',
             'program_studi' => 'required|string|max:255',
             'deskripsi' => 'required|string',
-            'foto' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:20480',
+            'foto' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:20480',
         ]);
+
+        $fotoname = $testi->foto;
         if ($request->hasFile('foto')) {
             $foto = $request->file('foto');
             $fotoname = time() . '.' . $foto->getClientOriginalExtension();

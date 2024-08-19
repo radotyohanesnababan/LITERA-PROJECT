@@ -127,7 +127,7 @@ Route::middleware([
 
     //Rpute crud-galeri
     Route::post('admin/galeri', [GaleriController::class, 'addGaleri'])->name('addGaleri');
-    Route::put('admin/galeri/{id}', [GaleriController::class, 'editFoto'])->name('editGaleri');
+    Route::put('admin/galeri/{id}', [GaleriController::class, 'editGaleri'])->name('editGaleri');
 
     //Route nav-galeri
     Route::get('admin/addfoto', Addgaleri::class)->name('addgaleri');

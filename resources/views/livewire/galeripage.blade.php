@@ -94,7 +94,7 @@
                             <input type="search" id="searchtermprak" name="searchtermprak"
                                 wire:model.defer="searchtermprak"
                                 class="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                placeholder="Cari Kegiatan disini .." required />
+                                placeholder="Cari ID Kegiatan disini .." required />
                             <button type="submit"
                                 class="text-white absolute end-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Search</button>
                         </div>
@@ -112,6 +112,7 @@
                                     </th>
                                     <th>ID Kegiatan</th>
                                     <th>Foto</th>
+                                    <th>Deskripsi</th>
                                     <th></th>
                                 </tr>
                             </thead>
@@ -128,16 +129,20 @@
                                                 <div class="flex items-center gap-3">
                                                     <div class="avatar">
                                                         <div class="mask mask-squircle h-12 w-12">
-                                                            <img src="{{ asset('storage/galeri/' . $prak->foto) }}"
-                                                                alt="{{ $prak->deskripsi }}" />
+                                                            <a href="{{ asset('storage/galeri/' . $prak->foto) }}"><img
+                                                                    src="{{ asset('storage/galeri/' . $prak->foto) }}"
+                                                                    alt="{{ $prak->deskripsi }}" /></a>
                                                         </div>
                                                     </div>
-                                                    <div>
-                                                        <div class="font-bold">{{ $prak->deskripsi }}</div>
-                                                    </div>
+
                                                     <div>
                                                         <div class="font-bold"></div>
                                                     </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div>
+                                                    <div class="font-bold">{{ $prak->deskripsi }}</div>
                                                 </div>
                                             </td>
                                             <th>
@@ -242,8 +247,9 @@
                                                 <div class="flex items-center gap-3">
                                                     <div class="avatar">
                                                         <div class="mask mask-squircle h-12 w-12">
-                                                            <img src="{{ asset('storage/galeri/' . $outbond->foto) }}"
-                                                                alt="{{ $outbond->deskripsi }}" />
+                                                            <a href="{{ asset('storage/galeri/' . $outbond->foto) }}"><img
+                                                                    src="{{ asset('storage/galeri/' . $outbond->foto) }}"
+                                                                    alt="{{ $outbond->deskripsi }}" /></a>
                                                         </div>
                                                     </div>
 
@@ -309,7 +315,7 @@
                             onclick="window.location.href='{{ route('addgaleri') }}'">Tambah Staff</button>
                     </div>
                 </div>
-                
+
             @endif
 
             @if ($activePage == 'bukapuasa-table')
@@ -345,6 +351,7 @@
                                     </th>
                                     <th>ID Kegiatan</th>
                                     <th>Foto</th>
+                                    <th>Deskripsi</th>
                                     <th></th>
                                 </tr>
                             </thead>
@@ -361,16 +368,22 @@
                                                 <div class="flex items-center gap-3">
                                                     <div class="avatar">
                                                         <div class="mask mask-squircle h-12 w-12">
-                                                            <img src="{{ asset('storage/galeri/' . $bukapuasa->foto) }}"
-                                                                alt="{{ $bukapuasa->deskripsi }}" />
+                                                            <a
+                                                                href="{{ asset('storage/galeri/' . $bukapuasa->foto) }}"><img
+                                                                    src="{{ asset('storage/galeri/' . $bukapuasa->foto) }}"
+                                                                    alt="{{ $bukapuasa->deskripsi }}" /></a>
+
                                                         </div>
                                                     </div>
-                                                    <div>
-                                                        <div class="font-bold">{{ $bukapuasa->deskripsi }}</div>
-                                                    </div>
+
                                                     <div>
                                                         <div class="font-bold"></div>
                                                     </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div>
+                                                    <div class="font-bold">{{ $bukapuasa->deskripsi }}</div>
                                                 </div>
                                             </td>
                                             <th>
@@ -425,7 +438,7 @@
                             onclick="window.location.href='{{ route('addgaleri') }}'">Tambah Staff</button>
                     </div>
                 </div>
-                
+
             @endif
         </div>
 

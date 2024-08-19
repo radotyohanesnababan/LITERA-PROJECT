@@ -52,8 +52,9 @@
                                     <div class="flex items-center gap-3">
                                         <div class="avatar">
                                             <div class="mask mask-squircle h-12 w-12">
-                                                <img src="{{ asset('storage/testi/' . $item->foto) }}"
-                                                    alt="Avatar Tailwind CSS Component" />
+                                                <a href="{{ asset('storage/testi/' . $item->foto) }}"><img src="{{ asset('storage/testi/' . $item->foto) }}"
+                                                    alt="Avatar Tailwind CSS Component" /></a>
+                                                
                                             </div>
                                         </div>
                                         <div>

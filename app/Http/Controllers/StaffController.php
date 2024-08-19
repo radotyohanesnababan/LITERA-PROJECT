@@ -46,8 +46,9 @@ class StaffController extends Controller
             'nama' => 'required|string|max:255',
             'posisi' => 'required|string|max:255',
             'sub_posisi' => 'required|string|max:255',
-            'foto' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048'
+            'foto' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048'
         ]);
+        $fotoname = $staff->foto;
         if ($request->hasFile('foto')) {
             $foto = $request->file('foto');
             $fotoname = time() . '.' . $foto->getClientOriginalExtension();

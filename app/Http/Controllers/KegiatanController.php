@@ -50,11 +50,13 @@ class KegiatanController extends Controller
     public function editKegiatan(Request $request, $id)
     {
         $kegiatan = Kegiatan::findOrFail($id);
-        dd($request->all());
+        //dd($request->all());
         $request->validate([
             'deskripsi' => 'required|string|max:255',
-            'foto' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048'
+            'foto' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048'
         ]);
+
+        $fotoname = $kegiatan->foto;
 
         if ($request->hasFile('foto')) {
             $foto = $request->file('foto');

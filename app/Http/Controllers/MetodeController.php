@@ -34,8 +34,10 @@ class MetodeController extends Controller
         //dd($request->all());
         $request->validate([
             'deskripsi' => 'required|string|max:255',
-            'foto' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048'
+            'foto' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048'
         ]);
+
+        $fotoname = $metode->foto;
 
         if ($request->hasFile('foto')) {
             $foto = $request->file('foto');

@@ -117,8 +117,9 @@
                                                 <div class="flex items-center gap-3">
                                                     <div class="avatar">
                                                         <div class="mask mask-squircle h-12 w-12">
-                                                            <img src="{{ asset('storage/foto/' . $mgmt->foto) }}"
-                                                                alt="{{ $mgmt->nama }}" />
+                                                            <a href="{{ asset('storage/foto/' . $mgmt->foto) }}"><img src="{{ asset('storage/foto/' . $mgmt->foto) }}"
+                                                                alt="{{ $mgmt->nama }}" /></a>
+                                                            
                                                         </div>
                                                     </div>
                                                     <div>
@@ -232,8 +233,9 @@
                                                     <div class="flex items-center gap-3">
                                                         <div class="avatar">
                                                             <div class="mask mask-squircle h-12 w-12">
-                                                                <img src="{{ asset('storage/foto/' . $tentor->foto) }}"
-                                                                    alt="{{ $tentor->nama }}" />
+                                                                <a href="{{ asset('storage/foto/' . $tentor->foto) }}"> <img src="{{ asset('storage/foto/' . $tentor->foto) }}"
+                                                                    alt="{{ $tentor->nama }}" /></a>
+                                                               
                                                             </div>
                                                         </div>
                                                         <div>

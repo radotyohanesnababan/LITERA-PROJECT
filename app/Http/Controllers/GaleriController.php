@@ -41,8 +41,9 @@ class GaleriController extends Controller
         $request->validate([
             'kategori' => 'required|string|max:255',
             'deskripsi' => 'required|string|max:255',
-            'foto' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048'
+            'foto' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048'
         ]);
+        $fotoname = $galeri->foto;
         if ($request->hasFile('foto')) {
             $foto = $request->file('foto');
             $fotoname = time() . '.' . $foto->getClientOriginalExtension();
