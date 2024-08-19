@@ -188,7 +188,7 @@
         </div>
 
         <!-- Testimoni -->
-        <div class="bg-[#9583A0] py-20">
+        <div class="bg-[#9583A0]">
             <div class="relative flex flex-row justify-center items-center ">
                 <div class="relative w-max">
                     <!-- Gambar petik1 dan petik2 dengan margin negatif -->
@@ -236,7 +236,6 @@
 
                 
         </div>
-
         {{-- Footer --}}
         <div class="bg-[#31081F] pt-10 pb-10">
             <h1 class="ml-4 md:ml-10 text-3xl md:text-5xl font-bold text-[#DAB93C]">Punya Pertanyaan?</h1>

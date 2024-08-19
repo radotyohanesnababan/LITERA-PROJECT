@@ -24,7 +24,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&&family=Zain:wght@200;300;400;700;800;900&display=swap" rel="stylesheet">
     
     <title>LITERA</title>
-    <link rel="stylesheet" href="{{ asset('css/about.css') }}">
     @stack('styles')
 </head>
 

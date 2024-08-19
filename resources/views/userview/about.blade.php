@@ -53,11 +53,8 @@
                     <h2 class="isi3">
                         Misi:
                     </h2>
-                    <ul class="jarak list-disc">
-                        <li class="list1">
-                            {!! $profil->misi !!}
-                        </li>
-
+                    <ul class="list1">
+                        {!! $profil->misi !!}
                     </ul>
                 </div>
             </div>
