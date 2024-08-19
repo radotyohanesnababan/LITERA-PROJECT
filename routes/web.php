@@ -51,8 +51,9 @@ Route::get('/profile', function () {
     return view('userview.profile');
 });
 
-
-
+Route::get('/galeri', function () {
+    return view('userview.galeri');
+});
 
 Route::middleware([
     'auth:sanctum',
