@@ -55,6 +55,30 @@ Route::get('/galeri', function () {
     return view('userview.galeri');
 });
 
+// GALERI
+Route::get('/praktek', function () {
+    return view('userview.praktek');
+});
+Route::get('/outbond', function () {
+    return view('userview.outbond');
+});
+Route::get('/bukber', function () {
+    return view('userview.bukber');
+});
+Route::get('/reguler', function () {
+    return view('userview.reguler');
+});
+Route::get('/outdoor', function () {
+    return view('userview.outdoor');
+});
+Route::get('/audio', function () {
+    return view('userview.audio');
+});
+Route::get('/flashcard', function () {
+    return view('userview.flashcard');
+});
+
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
