@@ -22,7 +22,7 @@ class StaffController extends Controller
         if ($request->hasFile('foto')) {
             $foto = $request->file('foto');
             $fotoname = time() . '.' . $foto->getClientOriginalExtension();
-            $foto->storeAs('public/foto', $fotoname);
+            $foto->storeAs('public/staff', $fotoname);
         }
 
         $staff = new Staff();
@@ -52,7 +52,7 @@ class StaffController extends Controller
         if ($request->hasFile('foto')) {
             $foto = $request->file('foto');
             $fotoname = time() . '.' . $foto->getClientOriginalExtension();
-            $foto->storeAs('public/foto', $fotoname);
+            $foto->storeAs('public/staff', $fotoname);
         }
         $staff->nama = $request->nama;
         $staff->posisi = $request->posisi;

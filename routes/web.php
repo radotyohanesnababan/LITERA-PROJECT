@@ -13,6 +13,8 @@ use App\Http\Controllers\MetodeController;
 use App\Http\Controllers\ProgramController;
 use App\Http\Controllers\ViewHomeController;
 use App\Http\Controllers\ViewAboutController;
+use App\Http\Controllers\ViewGaleriController;
+use App\Http\Controllers\ViewProfileController;
 use App\Http\Controllers\GaleriController;
 use App\Livewire\Addkegiatan;
 use App\Livewire\Addtesti;
@@ -47,13 +49,17 @@ Route::get('/', [ViewHomeController::class, 'index'])->name('home');
 // });
 Route::get('/about', [ViewAboutController::class, 'index'])->name('about');
 
-Route::get('/profile', function () {
-    return view('userview.profile');
-});
+// Route::get('/profile', function () {
+//     return view('userview.profile');
+// });
 
-Route::get('/galeri', function () {
-    return view('userview.galeri');
-});
+Route::get('/profile', [ViewProfileController::class, 'index'])->name('profile');
+
+// Route::get('/galeri', function () {
+//     return view('userview.galeri');
+// });
+
+Route::get('/galeri', [ViewGaleriController::class, 'index'])->name('galeri');
 
 // GALERI
 Route::get('/praktek', function () {
@@ -84,9 +90,10 @@ Route::middleware([
     config('jetstream.auth_session'),
     'verified',
 ])->group(function () {
-    Route::get('admin/dashboard', function () {
+    Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
+
     //route admin-area
     Route::get('admin/editpage', Editpage::class)->name('editpage');
     Route::get('admin/staffpage', Staffpage::class)->name('staff');
