@@ -16,9 +16,18 @@
             <div class="mb-5">
                 <label for="kategori" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Kategori
                     Kegiatan</label>
-                <input type="kategori" id="kategori" name="kategori"
+                    <select id="kategori" name="kategori"
                     class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
-                    required />
+                    required >
+                    <option value="" disabled>Pilih kategori</option>
+                    <option value="Kelas Praktek">Kelas Praktek</option>
+                    <option value="Outbond">Outbond</option>
+                    <option value="Buka Puasa">Buka Puasa</option>
+                    <option value="Reguler Learning">Reguler Learning</option>
+                    <option value="Outdoor Learning">Outdoor Learning</option>
+                    <option value="Audio Visual Learning">Audio Visual Learning</option>
+                    <option value="Flash Card Learning">Flash Card Learning</option>
+                </select>
             </div>
             <div class="mb-5">
                 <label for="deskripsi"

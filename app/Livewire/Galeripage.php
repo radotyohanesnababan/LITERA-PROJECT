@@ -12,6 +12,10 @@ class Galeripage extends Component
     public $searchtermprak = '';
     public $searchtermoutbond = '';
     public $searchtermbukapuasa = '';
+    public $searchtermoutdoor = '';
+    public $searchtermreguler= '';
+    public $searchtermaudio ='';
+    public $searchtermflash ='';
 
     public $modalVisible = false;
     public $currentfoto;
@@ -20,10 +24,18 @@ class Galeripage extends Component
     public $filteredprak = [];
     public $filteredoutbond = [];
     public $filteredbukapuasa = [];
+    public $filteredoutdoor = [];
+    public $filteredreguler = [];
+    public $filteredaudio = [];
+    public $filteredflash = [];
 
     public $fotooutbond = [];
     public $fotobukapuasa = [];
     public $fotoprak = [];
+    public $fotooutdoor =[];
+    public $fotoreguler =[];
+    public $fotoaudio =[];
+    public $fotoflash =[];
 
     public $activePage = 'prak-table';
 
@@ -33,9 +45,17 @@ class Galeripage extends Component
         $this->fotooutbond = Galeri::where('kategori', 'Outbond')->get();
         $this->fotobukapuasa = Galeri::where('kategori', 'Buka Puasa')->get();
         $this->fotoprak = Galeri::where('kategori', 'Kelas Praktek')->get();
+        $this->fotoflash = Galeri::where('kategori', 'Flash Card Learning')->get();
+        $this->fotoreguler = Galeri::where('kategori', 'Reguler Learning')->get();
+        $this->fotooutdoor = Galeri::where('kategori', 'Outdoor Learning')->get();
+        $this->fotoaudio = Galeri::where('kategori', 'Audio Visual Learning')->get();
         $this->filteredbukapuasa = $this->fotobukapuasa;
         $this->filteredprak = $this->fotoprak;
         $this->filteredoutbond = $this->fotooutbond;
+        $this->filteredaudio = $this->fotoaudio;
+        $this->filteredreguler = $this->fotoreguler;
+        $this->filteredflash= $this->fotoflash;
+        $this->filteredoutdoor = $this->fotooutdoor;
         
     }
 
@@ -57,7 +77,31 @@ class Galeripage extends Component
             ->where('id', 'like', '%' . $this->searchtermbukapuasa . '%')
             ->get(); 
     }
+    public function searchoutdoor()
+    {  
+        $this->filteredoutdoor = Galeri::where('kategori', 'Outdoor Learning')
+            ->where('id', 'like', '%' . $this->searchtermoutdoor . '%')
+            ->get(); 
+    }
+    public function searchaudio()
+    {  
+        $this->filteredaudio = Galeri::where('kategori', 'Audio Visual Learning')
+            ->where('id', 'like', '%' . $this->searchtermaudio . '%')
+            ->get(); 
+    }
+    public function searchflash()
+    {  
+        $this->filteredflash = Galeri::where('kategori', 'Flash Card Learning')
+            ->where('id', 'like', '%' . $this->searchtermflash . '%')
+            ->get(); 
+    }
 
+    public function searchreguler()
+    {  
+        $this->filteredreguler = Galeri::where('kategori', 'Reguler Learning')
+            ->where('id', 'like', '%' . $this->searchtermreguler . '%')
+            ->get(); 
+    }
 
     //crud-logic
     public function deleteFoto()

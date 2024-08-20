@@ -15,6 +15,13 @@ use App\Http\Controllers\ViewHomeController;
 use App\Http\Controllers\ViewAboutController;
 use App\Http\Controllers\ViewGaleriController;
 use App\Http\Controllers\ViewProfileController;
+use App\Http\Controllers\ViewAudioController;
+use App\Http\Controllers\ViewBukberController;
+use App\Http\Controllers\ViewFlashcardController;
+use App\Http\Controllers\ViewOutbondController;
+use App\Http\Controllers\ViewPraktekController;
+use App\Http\Controllers\ViewRegulerController;
+use App\Http\Controllers\ViewOutdoorController;
 use App\Http\Controllers\GaleriController;
 use App\Livewire\Addkegiatan;
 use App\Livewire\Addtesti;
@@ -62,27 +69,36 @@ Route::get('/profile', [ViewProfileController::class, 'index'])->name('profile')
 Route::get('/galeri', [ViewGaleriController::class, 'index'])->name('galeri');
 
 // GALERI
-Route::get('/praktek', function () {
-    return view('userview.praktek');
-});
-Route::get('/outbond', function () {
-    return view('userview.outbond');
-});
-Route::get('/bukber', function () {
-    return view('userview.bukber');
-});
-Route::get('/reguler', function () {
-    return view('userview.reguler');
-});
-Route::get('/outdoor', function () {
-    return view('userview.outdoor');
-});
-Route::get('/audio', function () {
-    return view('userview.audio');
-});
-Route::get('/flashcard', function () {
-    return view('userview.flashcard');
-});
+// Route::get('/praktek', function () {
+//     return view('userview.praktek');
+// });
+Route::get('/praktek', [ViewPraktekController::class, 'index'])->name('praktek');
+
+// Route::get('/outbond', function () {
+//     return view('userview.outbond');
+// });
+Route::get('/outbond', [ViewOutbondController::class, 'index'])->name('outbond');
+// Route::get('/bukber', function () {
+//     return view('userview.bukber');
+// });
+Route::get('/bukber', [ViewBukberController::class, 'index'])->name('bukber');
+
+// Route::get('/reguler', function () {
+//     return view('userview.reguler');
+// });
+Route::get('/reguler', [ViewRegulerController::class, 'index'])->name('reguler');
+// Route::get('/outdoor', function () {
+//     return view('userview.outdoor');
+// });
+Route::get('/outdoor', [ViewOutdoorController::class, 'index'])->name('outdoor');
+// Route::get('/audio', function () {
+//     return view('userview.audio');
+// });
+Route::get('/audio', [ViewAudioController::class, 'index'])->name('audio');
+// Route::get('/flashcard', function () {
+//     return view('userview.flashcard');
+// });
+Route::get('/flashcard', [ViewFlashcardController::class, 'index'])->name('flashcard');
 
 
 Route::middleware([

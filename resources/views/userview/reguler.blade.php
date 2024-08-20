@@ -7,17 +7,12 @@
     </div>
     <div class="container mx-auto px-4 h-screen">
         <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            <div class="relative overflow-hidden rounded-lg">
-                <img src="{{ asset('storage/galeri/g1.png') }}" alt="Gambar 1" class="w-full h-full object-cover transition-transform duration-300 ease-in-out hover:scale-105">
-            </div>
-            <div class="relative overflow-hidden rounded-lg">
-                <img src="{{ asset('storage/galeri/g2.png') }}" alt="Gambar 2" class="w-full h-full object-cover transition-transform duration-300 ease-in-out hover:scale-105">
-            </div>
-            <div class="relative overflow-hidden rounded-lg">
-                <img src="{{ asset('storage/galeri/g3.png') }}" alt="Gambar 3" class="w-full h-full object-cover transition-transform duration-300 ease-in-out hover:scale-105">
-            </div>
-            <div class="relative overflow-hidden rounded-lg">
-                <img src="{{ asset('storage/galeri/g3.png') }}" alt="Gambar 4" class="w-full h-full object-cover transition-transform duration-300 ease-in-out hover:scale-105">
+            <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                @foreach ($galeri as $item )
+                <div class="relative overflow-hidden rounded-lg">
+                    <img src="{{ asset('storage/galeri/' . $item->foto) }}" alt="{{ $item->deskripsi }}" class="w-full h-full object-cover transition-transform duration-300 ease-in-out hover:scale-105">
+                </div>
+                @endforeach
             </div>
         </div>
     </div>
