@@ -51,15 +51,15 @@
                             <th>
                 
                                 <button class="btn btn-outline btn-warning"><a
-                                        href="{{ route('editmetode', $item->id) }}">Edit</a></button>
-                                <button wire:click="showModal({{ $item->id }})" class="btn btn-outline btn-error"
+                                        href="{{ route('editmetode', $item->id) }}">Edit Foto</a></button>
+                                {{-- <button wire:click="showModal({{ $item->id }})" class="btn btn-outline btn-error"
                                     type="button">
                                     Hapus
-                                </button>
+                                </button> --}}
 
                             </th>
                         </tr>
-                        @if ($modalVisible)
+                        {{-- @if ($modalVisible)
                             <div id="popup-modal" tabindex="-1"
                                 class="fixed top-0 right-0 left-0 z-50 flex items-center justify-center w-full h-screen bg-black bg-opacity-50">
                                 <div
@@ -86,15 +86,15 @@
                                     </div>
                                 </div>
                             </div>
-                        @endif
+                        @endif --}}
                     @empty
                         <div class="text-center">No data</div>
                     @endforelse
                 </tbody>
             </table>
-            <div class="flex justify-end mt-2">
+            {{-- <div class="flex justify-end mt-2">
                 <button class= "btn btn-outline btn-primary mb-2 "
                     onclick="window.location.href='{{ route('addmetode') }}'">Tambah Metode</button>
-            </div>
+            </div> --}}
         </div>
 </div>

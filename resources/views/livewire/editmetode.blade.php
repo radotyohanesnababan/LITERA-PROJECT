@@ -6,7 +6,7 @@
             </h2>
             <div></div>
             <h3 class=" p-2 font-weight-400 text-l text-gray-800 leading-tight">
-                Halaman Edit Metode
+                {{ $metode->deskripsi }}
             </h3>
         </div>
     </x-slot>
@@ -14,13 +14,6 @@
         <form class=" mx-auto mt-6 " method="POST" action="{{ route('editMetode', $metode->id) }}" enctype="multipart/form-data">
             @csrf
             @method('PUT')
-            <div class="mb-5">
-                <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" id="foto"
-                    name="foto">Deskripsi Kegiatan</label>
-                <textarea id="deskripsi" rows="8" name="deskripsi"
-                    class="block w-full px-2 text-sm text-gray-800 bg-white border-0 dark:bg-gray-800 focus:ring-0 dark:text-white dark:placeholder-gray-400"
-                    required> {{ $metode->deskripsi }} </textarea>
-            </div>
 
             <div class="mb-5">
                 <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" id="foto"

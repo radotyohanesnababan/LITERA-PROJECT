@@ -86,19 +86,19 @@ Route::get('/bukber', [ViewBukberController::class, 'index'])->name('bukber');
 // Route::get('/reguler', function () {
 //     return view('userview.reguler');
 // });
-Route::get('/reguler', [ViewRegulerController::class, 'index'])->name('reguler');
+Route::get('/regular-learning', [ViewRegulerController::class, 'index'])->name('reguler');
 // Route::get('/outdoor', function () {
 //     return view('userview.outdoor');
 // });
-Route::get('/outdoor', [ViewOutdoorController::class, 'index'])->name('outdoor');
+Route::get('/outdoor-learning', [ViewOutdoorController::class, 'index'])->name('outdoor');
 // Route::get('/audio', function () {
 //     return view('userview.audio');
 // });
-Route::get('/audio', [ViewAudioController::class, 'index'])->name('audio');
+Route::get('/audio-visual-learning', [ViewAudioController::class, 'index'])->name('audio');
 // Route::get('/flashcard', function () {
 //     return view('userview.flashcard');
 // });
-Route::get('/flashcard', [ViewFlashcardController::class, 'index'])->name('flashcard');
+Route::get('/flash-card-learning', [ViewFlashcardController::class, 'index'])->name('flashcard');
 
 
 Route::middleware([

@@ -33,7 +33,6 @@ class MetodeController extends Controller
         $metode = Metode::findOrFail($id);
         //dd($request->all());
         $request->validate([
-            'deskripsi' => 'required|string|max:255',
             'foto' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048'
         ]);
 
@@ -45,7 +44,6 @@ class MetodeController extends Controller
             $foto->storeAs('public/metode', $fotoname);
         }
 
-        $metode->deskripsi = $request->deskripsi;
         $metode->foto = $fotoname;
         $metode->save();
         notify()->success('Data metode diperbarui');

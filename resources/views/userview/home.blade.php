@@ -14,7 +14,7 @@
             <!-- Overlay and Content -->
             <div
                 class="relative md:absolute w-full md:inset-0 flex flex-col justify-center items-center text-center text-black">
-                <img src="{{ asset('storage/Logo2.svg') }}" class="logo-size" alt="Logo">
+                <img src="{{ asset('storage/Logo-2.svg') }}" class="logo-size" alt="Logo">
                 <h2 class="font-bold text-xl sm:text-6xl md:text-5xl md:mb-5 xl:text-7xl lg:mt-5 lg:mb-8 three-d-text">
                     JAMINAN KELAS 12</h2>
                 <p class="text-size1 font-bold "><span class="text-red-500">FREE </span>1 tahun gapyear apabila belum
@@ -126,37 +126,35 @@
 
         <!-- METODE -->
         <div class="mt-10 pb-20">
-            <h1 class="text-2xl md:text-4xl md:mb-10 lg:text-5xl font-bold text-[#DAB93C] mb-10 text-center">Metode
-                Pembelajaran</h1>
+            <h1 class="text-2xl md:text-4xl md:mb-10 lg:text-5xl font-bold text-[#DAB93C] mb-10 text-center">Metode Pembelajaran</h1>
             <div id="indicators-carousel" class="relative w-full" data-carousel="static">
                 <!-- Carousel wrapper -->
                 <div class="z-10 relative overflow-hidden mx-20 rounded-lg carousel-container">
-                    <!-- Item 1 -->
-                    @foreach ($metode as $item)
-                        <div class="duration-700 ease-in-out" data-carousel-item="active">
-                            <figure class="bg-[#26547D] flex flex-col figur-aka">
-                                <img src="{{ asset('storage/metode/' . $item->foto) }}" class="image-size object-cover"
-                                    alt="Image 1">
-                                <figcaption class="caption mt-2 font-bold">
-                                    {{ $item->deskripsi }}
-                                </figcaption>
-                            </figure>
+                    <!-- Loop through items -->
+                    @foreach ($metode as $index => $item)
+                        <div class="duration-700 ease-in-out" data-carousel-item="{{ $index === 0 ? 'active' : '' }}">
+                            <a href="{{ url(Str::slug($item->deskripsi)) }}">
+                                <figure class="bg-[#26547D] flex flex-col figur-aka">
+                                    <img src="{{ asset('storage/metode/' . $item->foto) }}" class="image-size object-cover"
+                                        alt="Image {{ $item->id }}">
+                                    <figcaption class="caption mt-2 font-bold">
+                                        {{ $item->deskripsi }}
+                                    </figcaption>
+                                </figure>
+                            </a>
                         </div>
                     @endforeach
                 </div>
-
+        
                 <!-- Slider indicators -->
-                <div
-                    class="absolute z-20 flex -translate-x-1/2 space-x-3 md:space-x-6 rtl:space-x-reverse bottom-5 left-1/2">
-                    <button type="button" class="control-slider rounded-full" aria-current="true" aria-label="Slide 1"
-                        data-carousel-slide-to="0"></button>
-                    <button type="button" class="control-slider rounded-full" aria-current="false" aria-label="Slide 2"
-                        data-carousel-slide-to="1"></button>
-                    <button type="button" class="control-slider rounded-full" aria-current="false" aria-label="Slide 3"
-                        data-carousel-slide-to="2"></button>
-                    <button type="button" class="control-slider rounded-full" aria-current="false" aria-label="Slide 4"
-                        data-carousel-slide-to="3"></button>
+                <div class="absolute z-20 flex -translate-x-1/2 space-x-3 md:space-x-6 rtl:space-x-reverse bottom-5 left-1/2">
+                    @foreach ($metode as $index => $item)
+                        <button type="button" class="control-slider rounded-full"
+                            aria-current="{{ $index === 0 ? 'true' : 'false' }}" aria-label="Slide {{ $index + 1 }}"
+                            data-carousel-slide-to="{{ $index }}"></button>
+                    @endforeach
                 </div>
+        
                 <!-- Slider controls -->
                 <button type="button"
                     class="pb-10 md:pb-20 absolute top-0 start-0 z-10 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
@@ -186,6 +184,7 @@
                 </button>
             </div>
         </div>
+        
 
         <!-- Testimoni -->
         <div class="bg-[#9583A0]">
@@ -207,79 +206,82 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mx-10">
-                @foreach ($testi as $item )
-                <div class="relative flex flex-row items-stretch rounded-lg md:pr-10 md:mr-10 mb-10 card-size">
-                    <!-- Bagian Gambar -->
-                    <img class="absolute object-cover image-size2 rounded-t-lg md:rounded-none md:rounded-s-lg z-10"
-                        src="{{ asset('storage/testi/' . $item->foto) }}" alt="">
+                @foreach ($testi as $item)
+                    <div class="relative flex flex-row items-stretch rounded-lg md:pr-10 md:mr-10 mb-10 card-size">
+                        <!-- Bagian Gambar -->
+                        <img class="absolute object-cover image-size2 rounded-t-lg md:rounded-none md:rounded-s-lg z-10"
+                            src="{{ asset('storage/testi/' . $item->foto) }}" alt="">
 
-                    <!-- Bagian Konten -->
-                    <div class="flex flex-col justify-between leading-normal w-full relative">
-                        <!-- Bagian Informasi Akademik -->
-                        <div class="flex testi-card1 rounded-t-xl itmes-center flex-col text-end bg-testi">
-                            <p class="text-card1 font-bold text-white">{{ $item->nama }}</p>
-                            <p class="text-card1 font-bold text-white">{{ $item->asal_sekolah }}</p>
-                            <p class="text-card1 font-bold text-white">{{ $item->program_studi }}</p>
-                            <p class="text-card1 font-bold text-white">{{ $item->universitas }}</p>
-                        </div>
+                        <!-- Bagian Konten -->
+                        <div class="flex flex-col justify-between leading-normal w-full relative">
+                            <!-- Bagian Informasi Akademik -->
+                            <div class="flex testi-card1 rounded-t-xl itmes-center flex-col text-end bg-testi">
+                                <p class="text-card1 font-bold text-white">{{ $item->nama }}</p>
+                                <p class="text-card1 font-bold text-white">{{ $item->asal_sekolah }}</p>
+                                <p class="text-card1 font-bold text-white">{{ $item->program_studi }}</p>
+                                <p class="text-card1 font-bold text-white">{{ $item->universitas }}</p>
+                            </div>
 
-                        <!-- Bagian Testimoni -->
-                        <div class="flex items-center text-center rounded-b-xl bg-[#EFE6FF] pl-20 pd-5 h-full">
-                            <p class="text-card2 font-bold text-black">
-                                {{ $item->deskripsi }}
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                @endforeach
-                
-                
-                
-        </div>
-        {{-- Footer --}}
-        <div class="bg-[#31081F] pt-10 pb-10">
-            <h1 class="ml-4 md:ml-10 text-3xl md:text-5xl font-bold text-[#DAB93C]">Punya Pertanyaan?</h1>
-
-            <div class="text-white py-10">
-                <div class="container mx-auto px-4">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-                        <div class="ml-4 md:ml-10 mb-10">
-                            <h2 class="text-2xl md:text-3xl font-bold mb-6">Ikuti Kami</h2>
-                            <div class="flex flex-col space-y-6 md:space-y-10">
-                                @if ($profil)
-                                    <a href="{{ $profil->whatsapp_link }}" class="flex items-center space-x-4 text-white hover:text-blue-500">
-                                        <img src="{{ asset('storage/footer/icon-wa.svg') }}" alt="WhatsApp Icon"
-                                            class="w-8 h-8 md:w-10 md:h-10">
-                                        <span class="text-lg md:text-2xl">WhatsApp (Admin)</span>
-                                    </a>
-                                    <a href="{{ $profil->instagram_link }}" class="flex items-center space-x-4 text-white hover:text-blue-500">
-                                        <img src="{{ asset('storage/footer/icon-ig.svg') }}" alt="Instagram Icon"
-                                            class="w-8 h-8 md:w-10 md:h-10">
-                                        <span class="text-lg md:text-2xl">Instagram</span>
-                                    </a>
-                                    <a href="#" class="flex items-center space-x-4 text-white hover:text-blue-500">
-                                        <img src="{{ asset('storage/footer/icon-loc.svg') }}" alt="Location Icon"
-                                            class="w-8 h-8 md:w-10 md:h-10">
-                                        <span class="text-lg md:text-2xl">
-                                            {{ $profil->alamat }}
-                                        </span>
-                                    </a>
-                                @endif
-
+                            <!-- Bagian Testimoni -->
+                            <div class="flex items-center text-center rounded-b-xl bg-[#EFE6FF] pl-20 pd-5 h-full">
+                                <p class="text-card2 font-bold text-black">
+                                    {{ $item->deskripsi }}
+                                </p>
                             </div>
                         </div>
-                        <div class="mx-4 md:mx-20">
-                            <h2 class="text-2xl md:text-3xl font-bold text-end mb-6">Lokasi</h2>
-                            <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.0869920554235!2d-122.08424948468138!3d37.42199997982595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb5b5a3691911%3A0x1ec7eec5e8c0d476!2sGoogleplex!5e0!3m2!1sen!2sus!4v1614633062991!5m2!1sen!2sus"
-                                width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
-                                class="rounded-lg shadow-lg md:mx-10">
-                            </iframe>
+                    </div>
+                @endforeach
+
+
+
+            </div>
+            {{-- Footer --}}
+            <div class="bg-[#31081F] pt-10 pb-10">
+                <h1 class="ml-4 md:ml-10 text-3xl md:text-5xl font-bold text-[#DAB93C]">Punya Pertanyaan?</h1>
+
+                <div class="text-white py-10">
+                    <div class="container mx-auto px-4">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                            <div class="ml-4 md:ml-10 mb-10">
+                                <h2 class="text-2xl md:text-3xl font-bold mb-6">Ikuti Kami</h2>
+                                <div class="flex flex-col space-y-6 md:space-y-10">
+                                    @if ($profil)
+                                        <a href="{{ $profil->whatsapp_link }}"
+                                            class="flex items-center space-x-4 text-white hover:text-blue-500">
+                                            <img src="{{ asset('storage/footer/icon-wa.svg') }}" alt="WhatsApp Icon"
+                                                class="w-8 h-8 md:w-10 md:h-10">
+                                            <span class="text-lg md:text-2xl">WhatsApp (Admin)</span>
+                                        </a>
+                                        <a href="{{ $profil->instagram_link }}"
+                                            class="flex items-center space-x-4 text-white hover:text-blue-500">
+                                            <img src="{{ asset('storage/footer/icon-ig.svg') }}" alt="Instagram Icon"
+                                                class="w-8 h-8 md:w-10 md:h-10">
+                                            <span class="text-lg md:text-2xl">Instagram</span>
+                                        </a>
+                                        <a href="#"
+                                            class="flex items-center space-x-4 text-white hover:text-blue-500">
+                                            <img src="{{ asset('storage/footer/icon-loc.svg') }}" alt="Location Icon"
+                                                class="w-8 h-8 md:w-10 md:h-10">
+                                            <span class="text-lg md:text-2xl">
+                                                {{ $profil->alamat }}
+                                            </span>
+                                        </a>
+                                    @endif
+
+                                </div>
+                            </div>
+                            <div class="mx-4 md:mx-20">
+                                <h2 class="text-2xl md:text-3xl font-bold text-end mb-6">Lokasi</h2>
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.0869920554235!2d-122.08424948468138!3d37.42199997982595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb5b5a3691911%3A0x1ec7eec5e8c0d476!2sGoogleplex!5e0!3m2!1sen!2sus!4v1614633062991!5m2!1sen!2sus"
+                                    width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                                    class="rounded-lg shadow-lg md:mx-10">
+                                </iframe>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
 
     </body>
 @endsection

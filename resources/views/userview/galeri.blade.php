@@ -17,11 +17,15 @@
                 class="block text-[#31081F] font-bold text-xl md:text-2xl lg:text-3xl xl:text-4xl text-center pb-5 hover:underline">
                 Outbond
             </a>
+            <a href="/partnership"
+                class="block text-[#31081F] font-bold text-xl md:text-2xl lg:text-3xl xl:text-4xl text-center pb-5 hover:underline">
+                Partnership
+            </a>
             <a href="/bukber"
                 class="block text-[#31081F] font-bold text-xl md:text-2xl lg:text-3xl xl:text-4xl text-center pb-5 hover:underline">
                 Buka Puasa Bersama
             </a>
-            <a href="/reguler"
+            {{-- <a href="/reguler"
                 class="block text-[#31081F] font-bold text-xl md:text-2xl lg:text-3xl xl:text-4xl text-center pb-5 hover:underline">
                 Reguler Learning
             </a>
@@ -36,7 +40,7 @@
             <a href="/flashcard"
                 class="block text-[#31081F] font-bold text-xl md:text-2xl lg:text-3xl xl:text-4xl text-center pb-5 hover:underline">
                 Flashcard Learning
-            </a>
+            </a> --}}
         </div>
 
         <div class="bg-[#31081F] py-10">
