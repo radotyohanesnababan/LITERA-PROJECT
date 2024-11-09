@@ -1,0 +1,940 @@
+
+
+.body{
+    background-color: white;
+    font-family: "Montserrat", sans-serif;
+}
+
+.judul {
+    font-family: "Montserrat", sans-serif;
+}
+
+.isi {
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+/* JUMBOTRON */
+.three-d-text {
+    color: #DAB93C; /* Text color */
+    text-shadow: 
+        -1px 1px 1px #000, 
+        -2px 2px 1px #000, 
+        -3px 3px 1px #000, 
+        -4px 4px 1px #000, 
+        -5px 5px 1px #000;
+}
+@media (max-width: 760px) {
+    .three-d-text {
+        color: #DAB93C; /* Text color */
+        text-shadow: 
+            -1px 1px 1px #000, 
+            -2px 2px 1px #000;
+    }
+}
+.shadow-button {
+    box-shadow: 0px 4px 6px #a5881f;
+}
+.logo-size {
+    width: 200px;
+    margin-top: 90px;
+}
+.text-size1 {
+    font-size: 8px;
+    margin-top: 5px;
+}
+.text-size2 {
+    font-size: 8px;
+}
+.button-size{
+    font-size: 6px;
+    margin-top: 10px;
+}
+
+@media (min-width: 410px) and (max-width: 438px) {
+    .logo-size {
+        width: 200px;
+        margin-top: 110px;
+    }
+    .text-size1 {
+        font-size: 8px;
+        margin-top: 5px;
+    }
+    .text-size2 {
+        font-size: 8px;
+    }
+    .button-size{
+        font-size: 6px;
+        margin-top: 10px;
+    }
+} 
+@media (min-width: 439px) and (max-width: 759px) {
+    .logo-size{
+        width: 40vh;
+        margin-top: 120px;
+    }
+    .text-size1 {
+        font-size: 13px;
+        margin-top: 5px;
+    }
+    .text-size2 {
+        font-size: 13px;
+        margin-top: 5px;
+    }
+    .button-size{
+        font-size: 6px;
+        margin-top: 10px;
+        padding-bottom: 100px;
+    }
+} 
+@media (min-width: 760px) and (max-width: 920px) {
+    .logo-size{
+        width: 40vh;
+        margin-bottom: 10px;
+    } 
+    .text-size1 {
+        font-size: 30px;
+        margin-top: 5px;
+    }
+    .text-size2 {
+        font-size: 30px;
+        margin-top: 5px;
+    }
+    .button-size{
+        padding: 10px;
+        font-size: 30px;
+    }
+} 
+@media (min-width: 921px) and (max-width: 1019px) {
+    .logo-size{
+        width: 80vh;
+    }
+    .text-size1 {
+        font-size: 13px;
+        margin-top: 5px;
+    }
+    .text-size2 {
+        font-size: 13px;
+        margin-top: 5px;
+    }
+    .button-size{
+        font-size: 20px;
+    }
+} 
+@media (min-width: 1020px) and (max-width: 1279px) {
+    .logo-size{
+        width: 100vh;
+        margin-top: 40px;
+    } 
+    .text-size1 {
+        font-size: 22px;
+        margin-top: 5px;
+    }
+    .text-size2 {
+        font-size: 22px;
+        margin-top: 5px;
+    }
+    .button-size{
+        font-size: 18px;
+    }
+} 
+@media (min-width: 1280px) {
+    .logo-size{
+        width: 100vh;
+    } 
+    .text-size1 {
+        font-size: 22px;
+    }
+    .text-size2 {
+        font-size: 22px;
+    }
+    .button-size{
+        font-size: 20px;
+    }
+}
+@media (min-width: 1500px) {
+    .logo-size{
+        width: 120vh;
+        padding-top: 40px;
+    }
+    .text-size1 {
+        font-size: 24px;
+    }
+    .text-size2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+    .button-size{
+        font-size: 24px;
+    }
+}
+
+/* PROGRAM */
+.bg-top {
+    background: #9583A0 30%;
+    border-radius: 100% 100% 0 0;
+    padding: 20px 0;
+    overflow: hidden;
+}
+.bg-blur-bottom {
+    position: relative;
+    background: linear-gradient(to bottom, #9583A0 30%, #9B89A5 50%, #AA9CB3 70%, #C3B9CA 85%, #fff 100%);
+    padding: 40px; /* Sesuaikan padding sesuai kebutuhan */
+    overflow: hidden; /* Pastikan konten tidak melampaui batas */
+    height: 80%;
+}
+.items-stretch-md {
+    align-items: center;
+}
+.text-kelas {
+    font-size: 30px;
+}
+.list-size {
+    font-size: 8px; 
+}
+.checklist {
+    margin-left: 5px;
+    width: 10px;
+    height: 10px;
+}
+.card-footer {
+    margin-top: auto; /* Dorong footer ke bagian bawah */
+}
+.shadow-card1 {
+    border-radius: 10px;
+    background-color: #26547D;
+    box-shadow:
+        5px 0px 5px #585555;
+}
+.shadow-card2 {
+    border-radius: 15px;
+    background-color: #fff;
+    box-shadow:
+        2px 2px 5px #a39a9a,
+        4px 4px 5px #a39a9a;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.button-size2{
+    border-radius: 5px;
+    font-size: 6px;
+    padding: 5px;
+    margin-bottom: 10px;
+    box-shadow: 0px 2px 6px #5a4c17;
+}
+
+@media (min-width: 410px) and (max-width: 438px) { 
+    .list-size {
+        font-size: 10px; 
+    }
+    .checklist {
+        margin-left: 5px;
+        width: 12px;
+        height: 12px;
+    }
+} 
+@media (min-width: 439px) and (max-width: 759px) {
+    .list-size {
+        font-size: 13px; 
+    }
+    .checklist {
+        margin-left: 5px;
+        width: 15px;
+        height: 15px;
+    }
+    .button-size2{
+        border-radius: 5px;
+        font-size: 10px;
+        padding: 5px;
+        margin-bottom: 10px;
+        box-shadow: 0px 2px 6px #5a4c17;
+    }
+} 
+@media (min-width: 760px) and (max-width: 920px) {
+    .list-size {
+        font-size: 13px; 
+    }
+    .checklist {
+        margin-left: 5px;
+        width: 18px;
+        height: 18px;
+    }
+    .button-size2{
+        border-radius: 5px;
+        font-size: 12px;
+        padding: 5px;
+        margin-bottom: 12px;
+        box-shadow: 0px 2px 6px #5a4c17;
+    }
+    .shadow-card1 {
+        border-radius: 10px;
+        background-color: #26547D;
+        box-shadow:
+            8px 1px 5px #585555;
+    }
+    .shadow-card2 {
+        background-color: #fff;
+        box-shadow:
+            2px 2px 5px #E9E3E3,
+            4px 4px 5px #E9E3E3,
+            6px 6px 5px #E9E3E3,
+            8px 8px 5px #E9E3E3; 
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+} 
+@media (min-width: 921px) and (max-width: 1019px) {
+    .list-size {
+        font-size: 13px; 
+    }
+    .checklist {
+        margin-left: 5px;
+        width: 18px;
+        height: 18px;
+    }
+    .button-size2{
+        border-radius: 5px;
+        font-size: 12px;
+        padding: 5px;
+        margin-bottom: 12px;
+        box-shadow: 0px 2px 6px #5a4c17;
+    }
+    .shadow-card1 {
+        border-radius: 10px;
+        background-color: #26547D;
+        box-shadow:
+            8px 1px 5px #585555;
+    }
+    .shadow-card2 {
+        background-color: #fff;
+        box-shadow:
+            2px 2px 5px #E9E3E3,
+            4px 4px 5px #E9E3E3,
+            6px 6px 5px #E9E3E3,
+            8px 8px 5px #E9E3E3; 
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+} 
+@media (min-width: 1020px) and (max-width: 1279px) {
+    .text-kelas {
+        font-size: 35px;
+    }
+    .list-size {
+        font-size: 15px; 
+    }
+    .checklist {
+        margin-left: 5px;
+        width: 18px;
+        height: 18px;
+    }
+    .button-size2{
+        border-radius: 50px;
+        font-size: 12px;
+        padding: 5px;
+        margin-bottom: 12px;
+        box-shadow: 0px 2px 6px #5a4c17;
+    }
+    .shadow-card1 {
+        border-radius: 10px;
+        background-color: #26547D;
+        box-shadow:
+            8px 1px 5px #585555;
+    }
+    .shadow-card2 {
+        background-color: #fff;
+        box-shadow:
+            2px 2px 5px #E9E3E3,
+            4px 4px 5px #E9E3E3,
+            6px 6px 5px #E9E3E3,
+            8px 8px 5px #E9E3E3; 
+        margin-top: 25px;
+        margin-bottom: 24px;
+    }
+} 
+@media (min-width: 1280px) {
+    .text-kelas {
+        font-size: 40px;
+    }
+    .list-size {
+        font-size: 20px; 
+    }
+    .checklist {
+        margin-left: 5px;
+        width: 22px;
+        height: 22px;
+    }
+    .button-size2{
+        border-radius: 50px;
+        font-size: 15px;
+        padding: 5px;
+        box-shadow: 0px 2px 6px #5a4c17;
+    }
+    .shadow-card1 {
+        border-radius: 10px;
+        background-color: #26547D;
+        box-shadow:
+            8px 1px 5px #585555;
+    }
+    .shadow-card2 {
+        background-color: #fff;
+        box-shadow:
+            2px 2px 5px #E9E3E3,
+            4px 4px 5px #E9E3E3,
+            6px 6px 5px #E9E3E3,
+            8px 8px 5px #E9E3E3; 
+        margin-top: 30px;
+        margin-bottom: 24px;
+        padding-bottom: 20px;
+    }
+}
+@media (min-width: 1500px) {
+    .text-kelas {
+        font-size: 40px;
+    }
+    .list-size {
+        font-size: 22px; 
+    }
+    .checklist {
+        margin-left: 8px;
+        width: 22px;
+        height: 22px;
+    }
+    .button-size2{
+        margin-top: 25px;
+        border-radius: 50px;
+        font-size: 16px;
+        padding: 10px;
+        box-shadow: 0px 2px 6px #5a4c17;
+    }
+    .shadow-card1 {
+        border-radius: 10px;
+        background-color: #26547D;
+        box-shadow:
+            8px 1px 5px #585555;
+    }
+    .shadow-card2 {
+        background-color: #fff;
+        box-shadow:
+            2px 2px 5px #E9E3E3,
+            4px 4px 5px #E9E3E3,
+            6px 6px 5px #E9E3E3,
+            8px 8px 5px #E9E3E3; 
+        margin-top: 30px;
+        margin-bottom: 24px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+}
+
+/* Kegiatan */
+.k-size1 {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #DAB93C;
+    box-shadow:
+        5px 0px 0px #D8A32E;
+}
+.k-size2 { 
+    width: 50px;
+}
+ 
+@media (min-width: 760px) and (max-width: 920px) {
+    .k-size1 {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background-color: #DAB93C;
+        box-shadow:
+            5px 0px 0px #D8A32E;
+    }
+    .k-size2 { 
+        width: 70px;
+        height: 70px;
+    }
+} 
+@media (min-width: 921px) and (max-width: 1279px) {
+    .k-size1 {
+        width: 140px;
+        height: 140px;
+        border-radius: 50%;
+        background-color: #DAB93C;
+        box-shadow:
+            6px 0px 0px #D8A32E;
+    }
+    .k-size2 { 
+        width: 100px;
+        height: 100px;
+    }
+} 
+@media (min-width: 1280px) {
+    .k-size1 {
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+        background-color: #DAB93C;
+        box-shadow:
+            6px 0px 0px #D8A32E;
+    }
+    .k-size2 { 
+        width: 140px;
+        height: 140px;
+    }
+}
+
+/* Metode */
+.carousel-container {
+    display: flex;
+    height: 300px; /* Atur tinggi kontainer sesuai kebutuhan */
+    width: auto;
+    align-items: center; /* Vertikal centering */
+    justify-content: center; /* Horizontal centering */
+    overflow: hidden; /* Menyembunyikan bagian gambar yang mungkin meluap */
+}
+
+.figur-aka {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    width: fit-content;
+    padding: 10px;
+    padding-bottom: 14px;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+.image-size {
+    width: auto; 
+    height: 180px;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+.caption {
+    font-size: 15px;
+    color: white;
+    text-align: center;
+}
+
+.control-slider {
+    width: 10px;
+    height: 10px;
+}
+.inslider1 {
+    width: 30px;
+    height: 30px;
+}
+.inslider2 {
+    width: 15px;
+    height: 15px;
+}
+
+/* @media (min-width: 410px) and (max-width: 438px) {
+    
+} 
+@media (min-width: 439px) and (max-width: 759px) {
+    
+}  */
+@media (min-width: 760px) and (max-width: 920px) {
+    .carousel-container {
+        display: flex;
+        height: 550px; /* Atur tinggi kontainer sesuai kebutuhan */
+        width: auto;
+        align-items: center; /* Vertikal centering */
+        justify-content: center; /* Horizontal centering */
+        overflow: hidden; /* Menyembunyikan bagian gambar yang mungkin meluap */
+    }
+
+    .figur-aka {
+        display: flex;
+        justify-content: center; 
+        align-items: center; 
+        width: fit-content;
+        padding: 20px;
+        padding-bottom: 40px;
+        margin: 0 auto;
+        border-radius: 10px;
+    }
+    .image-size {
+        width: auto; 
+        height: 300px; 
+    }
+    .caption {
+        font-size: 28px;
+        padding-top: 30px;
+        color: white;
+        text-align: center;
+    }
+
+    .control-slider {
+        width: 20px;
+        height: 20px;
+    }
+    .inslider1 {
+        width: 60px;
+        height: 60px;
+    }
+    .inslider2 {
+        width: 30px;
+        height: 30px;
+    }
+} 
+@media (min-width: 921px) and (max-width: 1019px) {
+    .carousel-container {
+        display: flex;
+        height: 550px; /* Atur tinggi kontainer sesuai kebutuhan */
+        width: auto;
+        align-items: center; /* Vertikal centering */
+        justify-content: center; /* Horizontal centering */
+        overflow: hidden; /* Menyembunyikan bagian gambar yang mungkin meluap */
+    }
+
+    .figur-aka {
+        display: flex;
+        justify-content: center; 
+        align-items: center; 
+        width: fit-content;
+        padding: 20px;
+        padding-bottom: 40px;
+        margin: 0 auto;
+        border-radius: 10px;
+    }
+    .image-size {
+        width: auto; 
+        height: 300px; 
+    }
+    .caption {
+        font-size: 28px;
+        padding-top: 30px;
+        color: white;
+        text-align: center;
+    }
+
+    .control-slider {
+        width: 20px;
+        height: 20px;
+    }
+    .inslider1 {
+        width: 60px;
+        height: 60px;
+    }
+    .inslider2 {
+        width: 30px;
+        height: 30px;
+    }
+} 
+@media (min-width: 1020px) and (max-width: 1279px) {
+    .carousel-container {
+        display: flex;
+        height: 550px; /* Atur tinggi kontainer sesuai kebutuhan */
+        width: auto;
+        align-items: center; /* Vertikal centering */
+        justify-content: center; /* Horizontal centering */
+        overflow: hidden; /* Menyembunyikan bagian gambar yang mungkin meluap */
+    }
+
+    .figur-aka {
+        display: flex;
+        justify-content: center; 
+        align-items: center; 
+        width: fit-content;
+        padding: 20px;
+        padding-bottom: 40px;
+        margin: 0 auto;
+        border-radius: 10px;
+    }
+    .image-size {
+        width: auto; 
+        height: 300px; 
+    }
+    .caption {
+        font-size: 28px;
+        padding-top: 30px;
+        color: white;
+        text-align: center;
+    }
+
+    .control-slider {
+        width: 20px;
+        height: 20px;
+    }
+    .inslider1 {
+        width: 60px;
+        height: 60px;
+    }
+    .inslider2 {
+        width: 30px;
+        height: 30px;
+    }
+} 
+@media (min-width: 1280px) {
+    .carousel-container {
+        display: flex;
+        height: 550px; /* Atur tinggi kontainer sesuai kebutuhan */
+        width: auto;
+        align-items: center; /* Vertikal centering */
+        justify-content: center; /* Horizontal centering */
+        overflow: hidden; /* Menyembunyikan bagian gambar yang mungkin meluap */
+    }
+
+    .figur-aka {
+        display: flex;
+        justify-content: center; 
+        align-items: center; 
+        width: fit-content;
+        padding: 20px;
+        padding-bottom: 40px;
+        margin: 0 auto;
+        border-radius: 10px;
+    }
+    .image-size {
+        width: auto; 
+        height: 300px; 
+    }
+    .caption {
+        font-size: 28px;
+        padding-top: 30px;
+        color: white;
+        text-align: center;
+    }
+
+    .control-slider {
+        width: 20px;
+        height: 20px;
+    }
+    .inslider1 {
+        width: 60px;
+        height: 60px;
+    }
+    .inslider2 {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+/* media query */
+@media (min-width: 768px) {
+    .items-stretch-md {
+        align-items: stretch;
+    }
+}
+
+
+
+/* Testimoni */
+.petik1 {
+    width: 80px;
+    margin-left: -1rem;
+    margin-top: -2rem;  /* Setara dengan -mt-16 */
+}
+.petik2 {
+    width: 80px;
+    top: 0;
+    right: 0;
+    transform: translateX(75px) translateY(16px);
+}
+.text-tanya {
+    font-size: 90px; /* Sesuaikan ukuran font jika perlu */
+}
+
+.card-size {
+    width: 100%;
+    height: 150px;
+    margin-left: 20px;
+}
+.bg-testi {
+    background: linear-gradient(to right, #EFE6FF 0%, #E2DDF7 5%, #C1C4E1 15%, #8A9DBE 29%, #40678E 45%, #26547D 50%, #26547D 60%, #26547D 100% );
+}
+.text-card1{
+    font-size: 6px;
+    text-align: end;
+}
+.text-card2{
+    margin-right: 5px;
+    padding-left: 10px;
+    font-size: 6px;
+}
+.testi-card1 {
+    height: 50px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    padding-right: 10px;
+}
+.image-size2 {
+    margin-left: -3rem;
+    margin-top: -30px;
+    height: 180px;
+    width: auto;
+}
+@media (min-width: 439px) {
+    .text-card2{
+        font-size: 12px;
+    }
+} 
+@media (min-width: 760px) and (max-width: 920px) {
+    .petik1 {
+        width: 100px;
+        margin-left: -4rem;
+        margin-top: -2rem;  /* Setara dengan -mt-16 */
+
+    }
+    .petik2 {
+        width: 100px;
+        top: 0;
+        right: 0;
+        transform: translateX(90px) translateY(20px);
+
+    }
+    .text-tanya {
+        font-size: 120px; /* Sesuaikan ukuran font jika perlu */
+    }
+
+    .card-size {
+        width: 100%;
+        height: 200px;
+        margin-left: 20px;
+    }
+    .image-size2 {
+        margin-left: -3rem;
+        margin-top: -30px;
+        height: 230px;
+        width: auto;
+    }
+    .text-card1 {
+        font-size: 7px;
+    }
+    .text-card2{
+        font-size: 8px;
+        padding-left: 3.5rem;
+        margin-right: 10px;
+    }
+} 
+@media (min-width: 921px) and (max-width: 1279px) {
+    .petik1 {
+        width: 140px;
+        margin-left: -5.5rem;
+        margin-top: -3rem;  /* Setara dengan -mt-16 */
+
+    }
+    .petik2 {
+        width: 140px;
+        top: 0;
+        right: 0;
+        transform: translateX(120px) translateY(20px);
+
+    }
+    .text-tanya {
+        font-size: 150px; /* Sesuaikan ukuran font jika perlu */
+    }
+
+    .card-size {
+        width: 100%;
+        height: 250px;
+        margin-left: 20px;
+    }
+    .image-size2 {
+        margin-left: -3rem;
+        margin-top: -30px;
+        height: 280px;
+        width: auto;
+    }
+    .testi-card1 {
+        height: 80px;
+        padding-bottom: 5px;
+        padding-top: 5px;
+        padding-right: 10px;
+    }
+    .text-card1 {
+        font-size: 11px;
+    }
+    .text-card2{
+        font-size: 11px;
+        padding-left: 5rem;
+        margin-right: 10px;
+    }
+} 
+@media (min-width: 1280px) {
+    .petik1 {
+        width: 140px;
+        margin-left: -5.5rem;
+        margin-top: -3rem;  /* Setara dengan -mt-16 */
+    }
+    .petik2 {
+        width: 140px;
+        top: 0;
+        right: 0;
+        transform: translateX(120px) translateY(20px);
+    }
+    .text-tanya {
+        font-size: 150px; /* Sesuaikan ukuran font jika perlu */
+    }
+
+    .card-size {
+        width: 100%;
+        height: 250px;
+        margin-left: 20px;
+    }
+    .image-size2 {
+        margin-left: -3rem;
+        margin-top: -30px;
+        height: 280px;
+        width: auto;
+    }
+    .testi-card1 {
+        height: 80px;
+        padding-bottom: 5px;
+        padding-top: 5px;
+        padding-right: 10px;
+    }
+    .text-card1 {
+        font-size: 11px;
+    }
+    .text-card2{
+        font-size: 11px;
+        padding-left: 5rem;
+        margin-right: 10px;
+    }
+}
+@media (min-width: 1500px) {
+    .petik1 {
+        width: 140px;
+        margin-left: -5.5rem;
+        margin-top: -3rem;  /* Setara dengan -mt-16 */
+    }
+    .petik2 {
+        width: 140px;
+        top: 0;
+        right: 0;
+        transform: translateX(120px) translateY(20px);
+    }
+    .text-tanya {
+        font-size: 150px; /* Sesuaikan ukuran font jika perlu */
+    }
+
+    .card-size {
+        width: 100%;
+        height: 300px;
+        margin-left: 20px;
+    }
+    .image-size2 {
+        margin-left: -3rem;
+        margin-top: -30px;
+        height: 330px;
+        width: auto;
+    }
+    .testi-card1 {
+        height: 100px;
+        padding-bottom: 5px;
+        padding-top: 5px;
+        padding-right: 10px;
+    }
+    .text-card1 {
+        font-size: 12px;
+    }
+    .text-card2{
+        font-size: 14px;
+        padding-left: 7.5rem;
+        margin-right: 10px;
+    }
+}
+
+
+

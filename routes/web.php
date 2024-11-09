@@ -98,6 +98,7 @@ Route::get('/audio-visual-learning', [ViewAudioController::class, 'index'])->nam
 // Route::get('/flashcard', function () {
 //     return view('userview.flashcard');
 // });
+Route::get('/partnership', [ViewPraktekController::class, 'index'])->name('partnership');
 Route::get('/flash-card-learning', [ViewFlashcardController::class, 'index'])->name('flashcard');
 
 

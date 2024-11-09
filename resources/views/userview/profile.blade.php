@@ -51,7 +51,7 @@
         </div>
 
 
-        <div class="bg-[#31081F] py-10">
+        <div id="kontak" class="bg-[#31081F] py-10">
             <h1 class="ml-4 md:ml-10 text-3xl md:text-5xl font-bold text-[#DAB93C]">Punya Pertanyaan?</h1>
 
             <div class="text-white py-10">

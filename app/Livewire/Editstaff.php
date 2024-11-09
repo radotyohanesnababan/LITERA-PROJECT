@@ -13,6 +13,7 @@ class Editstaff extends Component
     }
     public function render()
     {
+        
         return view('livewire.editstaff')->layout('layouts.app');
     }
 }

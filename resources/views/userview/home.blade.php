@@ -1,10 +1,9 @@
 @extends('userview.index')
 
 @push('styles')
-    <link href="{{ asset('css/home.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('css/home.css') }}">
 @endpush
 @section('content')
-
     <body class="body">
         <div class="relative mb-10 md:mb-0 md:h-screen">
             <!-- Background Image -->
@@ -20,16 +19,18 @@
                 <p class="text-size1 font-bold "><span class="text-red-500">FREE </span>1 tahun gapyear apabila belum
                     mendapat</p>
                 <p class="text-size2 font-bold">Perguruan Tinggi Negeri</p>
-                <a href="https://wa.me/6282281709860?text=Halo,saya ingin mendaftar bimbel!" target="_blank"
-                    class="button-size py-1 px-2 bg-yellow-400 hover:bg-yellow-300 text-white md:mt-10 font-bold lg:mt-6 lg:py-3 lg:px-8 rounded-full shadow-button">
-                    Daftar Sekarang
-                </a>
+                @if ($profil)
+                    <a href="{{ $profil->whatsapp_link }}?text=Halo, saya ingin mendaftar bimbel!" target="_blank"
+                        class="button-size py-1 px-2 bg-yellow-400 hover:bg-yellow-300 text-white md:mt-10 font-bold lg:mt-6 lg:py-3 lg:px-8 rounded-full shadow-button">
+                        Daftar Sekarang
+                    </a>
+                @endif
 
             </div>
         </div>
 
         <!-- Program -->
-        <div class="relative h-auto">
+        <div id="program" class="relative h-auto">
             <div class="w-screen-xl mx-auto">
                 <div class="relative bg-top md:pb-10">
                     <h1 class=" text-xl md:text-4xl md:pt-5 lg:text-5xl font-bold text-[#DAB93C] text-center">Pilihan
@@ -58,11 +59,13 @@
                                 </ul>
                             </div>
                             <div class="card-footer flex justify-center">
-                                <a href="https://wa.me/6282281709860?text=Halo,saya ingin mendaftar bimbel dengan program SMP"
-                                    target="_blank"
-                                    class="bg-[#DAB93C] hover:bg-[#FFDD5A] text-white font-bold button-size2">
-                                    Saya mau daftar
-                                </a>
+                                @if ($profil)
+                                    <a href="{{ $profil->whatsapp_link }}?text=Halo, saya ingin mendaftar bimbel program SMP"
+                                        target="_blank"
+                                        class="bg-[#DAB93C] hover:bg-[#FFDD5A] text-white font-bold button-size2">
+                                        Saya mau daftar
+                                    </a>
+                                @endif
                             </div>
                         </div>
                     </div>
@@ -88,11 +91,13 @@
 
                             </ul>
                             <div class="flex justify-center">
-                                <a href="https://wa.me/6282281709860?text=Halo,saya ingin mendaftar bimbel dengan program SMP"
-                                    target="_blank"
-                                    class="bg-[#DAB93C] hover:bg-[#FFDD5A] text-white font-bold button-size2">
-                                    Saya mau daftar
-                                </a>
+                                @if ($profil)
+                                    <a href="{{ $profil->whatsapp_link }}?text=Halo, saya ingin mendaftar bimbel program SMA"
+                                        target="_blank"
+                                        class="bg-[#DAB93C] hover:bg-[#FFDD5A] text-white font-bold button-size2">
+                                        Saya mau daftar
+                                    </a>
+                                @endif
                             </div>
                         </div>
                     </div>
@@ -102,7 +107,7 @@
         </div>
 
         <!-- KEGIATAN -->
-        <div class="mt-10">
+        <div id="kegiatan" class="mt-10">
             <h1 class="text-2xl md:text-4xl lg:text-5xl font-bold text-[#DAB93C] text-center mb-10 md:mb15 lg:mb-20">
                 Kegiatan Akademik</h1>
             <div class="flex flex-wrap justify-center mx-10">
@@ -187,7 +192,7 @@
         
 
         <!-- Testimoni -->
-        <div class="bg-[#9583A0]">
+        <div id="testimoni" class="bg-[#9583A0]">
             <div class="relative flex flex-row justify-center items-center ">
                 <div class="relative w-max">
                     <!-- Gambar petik1 dan petik2 dengan margin negatif -->
@@ -197,7 +202,7 @@
                     <p class="text-2xl md:text-4xl lg:text-5xl font-bold text-[#DAB93C] text-center z-20">Apa kata mereka
                     </p>
                     <div class="relative text-right z-10">
-                        <p class="text-2xl md:text-4xl lg:text-5xl font-bold text-white mb-10 z-20">tentang Litera</p>
+                        <p class="text-2xl md:text-4xl lg:text-5xl font-bold text-white mb-10 z-20">tentang AlphaPro</p>
                     </div>
                 </div>
                 <div class="pb-14 z-10">
@@ -231,57 +236,58 @@
                         </div>
                     </div>
                 @endforeach
-
-
-
             </div>
-            {{-- Footer --}}
-            <div class="bg-[#31081F] pt-10 pb-10">
-                <h1 class="ml-4 md:ml-10 text-3xl md:text-5xl font-bold text-[#DAB93C]">Punya Pertanyaan?</h1>
+        </div>
 
-                <div class="text-white py-10">
-                    <div class="container mx-auto px-4">
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-                            <div class="ml-4 md:ml-10 mb-10">
-                                <h2 class="text-2xl md:text-3xl font-bold mb-6">Ikuti Kami</h2>
-                                <div class="flex flex-col space-y-6 md:space-y-10">
-                                    @if ($profil)
-                                        <a href="{{ $profil->whatsapp_link }}"
-                                            class="flex items-center space-x-4 text-white hover:text-blue-500">
-                                            <img src="{{ asset('storage/footer/icon-wa.svg') }}" alt="WhatsApp Icon"
-                                                class="w-8 h-8 md:w-10 md:h-10">
-                                            <span class="text-lg md:text-2xl">WhatsApp (Admin)</span>
-                                        </a>
-                                        <a href="{{ $profil->instagram_link }}"
-                                            class="flex items-center space-x-4 text-white hover:text-blue-500">
-                                            <img src="{{ asset('storage/footer/icon-ig.svg') }}" alt="Instagram Icon"
-                                                class="w-8 h-8 md:w-10 md:h-10">
-                                            <span class="text-lg md:text-2xl">Instagram</span>
-                                        </a>
-                                        <a href="#"
-                                            class="flex items-center space-x-4 text-white hover:text-blue-500">
-                                            <img src="{{ asset('storage/footer/icon-loc.svg') }}" alt="Location Icon"
-                                                class="w-8 h-8 md:w-10 md:h-10">
-                                            <span class="text-lg md:text-2xl">
-                                                {{ $profil->alamat }}
-                                            </span>
-                                        </a>
-                                    @endif
+        {{-- Footer --}}
+        <div id="kontak" class="bg-[#31081F] pt-10 pb-10">
+            <h1 class="ml-4 md:ml-10 text-3xl md:text-5xl font-bold text-[#DAB93C]">Punya Pertanyaan?</h1>
 
-                                </div>
+            <div class="text-white py-10">
+                <div class="container mx-auto px-4">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                        <div class="ml-4 md:ml-10 mb-10">
+                            <h2 class="text-2xl md:text-3xl font-bold mb-6">Ikuti Kami</h2>
+                            <div class="flex flex-col space-y-6 md:space-y-10">
+                                @if ($profil)
+                                    <a href="{{ $profil->whatsapp_link }}"
+                                        class="flex items-center space-x-4 text-white hover:text-blue-500">
+                                        <img src="{{ asset('storage/footer/icon-wa.svg') }}" alt="WhatsApp Icon"
+                                            class="w-8 h-8 md:w-10 md:h-10">
+                                        <span class="text-lg md:text-2xl">WhatsApp (Admin)</span>
+                                    </a>
+                                    <a href="{{ $profil->instagram_link }}"
+                                        class="flex items-center space-x-4 text-white hover:text-blue-500">
+                                        <img src="{{ asset('storage/footer/icon-ig.svg') }}" alt="Instagram Icon"
+                                            class="w-8 h-8 md:w-10 md:h-10">
+                                        <span class="text-lg md:text-2xl">Instagram</span>
+                                    </a>
+                                    <a href="#"
+                                        class="flex items-center space-x-4 text-white hover:text-blue-500">
+                                        <img src="{{ asset('storage/footer/icon-loc.svg') }}" alt="Location Icon"
+                                            class="w-8 h-8 md:w-10 md:h-10">
+                                        <span class="text-lg md:text-2xl">
+                                            {{ $profil->alamat }}
+                                        </span>
+                                    </a>
+                                @endif
+
                             </div>
-                            <div class="mx-4 md:mx-20">
-                                <h2 class="text-2xl md:text-3xl font-bold text-end mb-6">Lokasi</h2>
-                                <iframe
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.0869920554235!2d-122.08424948468138!3d37.42199997982595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb5b5a3691911%3A0x1ec7eec5e8c0d476!2sGoogleplex!5e0!3m2!1sen!2sus!4v1614633062991!5m2!1sen!2sus"
-                                    width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
-                                    class="rounded-lg shadow-lg md:mx-10">
-                                </iframe>
-                            </div>
+                        </div>
+                        <div class="mx-4 md:mx-20">
+                            <h2 class="text-2xl md:text-3xl font-bold text-end mb-6">Lokasi</h2>
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.0869920554235!2d-122.08424948468138!3d37.42199997982595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb5b5a3691911%3A0x1ec7eec5e8c0d476!2sGoogleplex!5e0!3m2!1sen!2sus!4v1614633062991!5m2!1sen!2sus"
+                                width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                                class="rounded-lg shadow-lg md:mx-10">
+                            </iframe>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+            
+            
 
     </body>
 @endsection

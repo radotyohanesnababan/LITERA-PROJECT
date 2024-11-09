@@ -1,6 +1,8 @@
 @extends('userview.index')
 
-
+@push('styles')
+    <link rel="stylesheet" href="{{ asset('css/about.css') }}">
+@endpush
 @section('content')
     @if ($profil)
 
@@ -8,7 +10,7 @@
             <div class="flex items-center justify-center py-10 xl:py-20">
                 <div class="text-center">
                     <p class="judul1">Tentang Kami</p>
-                    <img src="{{ asset('storage/Logo2.svg') }}" class="logo1 mt-4 mx-auto" alt="Logo">
+                    <img src="{{ asset('storage/Logo-2.svg') }}" class="logo1 mt-4 mx-auto" alt="Logo">
                 </div>
             </div>
 
@@ -108,7 +110,7 @@
                 </ol>
             </div>
             @if ($profil)
-                <div class="bg-[#31081F] py-10">
+                <div id="kontak" class="bg-[#31081F] py-10">
                     <h1 class="ml-4 md:ml-10 text-3xl md:text-5xl font-bold text-[#DAB93C]">Punya Pertanyaan?</h1>
 
                     <div class="text-white py-10">
