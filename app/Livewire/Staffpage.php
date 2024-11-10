@@ -4,6 +4,7 @@ namespace App\Livewire;
 
 use App\Models\Staff;
 
+use Debugbar;
 use Livewire\Component;
 
 use function Termwind\render;
@@ -12,7 +13,8 @@ class Staffpage extends Component
 {
     public $searchtermmgmt = '';
     public $searchtermtentor = '';
-    public $modalVisible = false;
+    public $modalVisiblemgmt = false;
+    public $modalVisibletentor = false;
     public $currentStaff;
     public $staff = [];
     public $filteredStaffmgmt = [];
@@ -54,27 +56,40 @@ class Staffpage extends Component
         if ($this->currentStaff) {
             $this->currentStaff->delete();
             $this->hideModal();
+            
         }
         notify()->success('Data staff dihapus');
         return redirect()->route('staff');
     }
-    public function showModal($id)
+    public function showModal($id, $type)
     {
         $this->currentStaff = Staff::find($id);
-        $this->modalVisible = true;
+
+    if ($type === 'mgmt') {
+        $this->modalVisiblemgmt = true;
+        $this->modalVisibletentor = false;  
+    } elseif ($type === 'tentor') {
+        $this->modalVisibletentor = true;
+        $this->modalVisiblemgmt = false;  
+    }
+    //dump($this->modalVisiblemgmt);
+        Debugbar::info('Modal Visible (mgmt)', $this->modalVisiblemgmt);
+        Debugbar::info('Modal Visible (tentor)', $this->modalVisibletentor);
     }
 
     public function hideModal()
     {
-        $this->modalVisible = false;
+        $this->modalVisiblemgmt = false;
+        $this->modalVisibletentor = false;
+
+        Debugbar::info('Modal Visible (mgmt)', $this->modalVisiblemgmt);
+        Debugbar::info('Modal Visible (tentor)', $this->modalVisibletentor);
     }
-
-
-    
 
     public function switchPage($page)
     {
         $this->activePage = $page;
+        $this->hideModal();
     }
     public function render()
     {

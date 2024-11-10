@@ -227,7 +227,7 @@
                                                         <h3
                                                             class="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">
                                                             Apakah anda yakin menghapus data dari ID
-                                                            {{ $currentFoto->id }}?
+                                                            {{ $currentfoto->id }}?
                                                         </h3>
                                                         <form wire:submit.prevent="deleteFoto">
                                                             <div class="flex justify-center gap-3">
@@ -345,7 +345,7 @@
                                                         <h3
                                                             class="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">
                                                             Apakah anda yakin menghapus data dari ID
-                                                            {{ $currentFoto->id }}?
+                                                            {{ $currentfoto->id }}?
                                                         </h3>
                                                         <form wire:submit.prevent="deleteFoto">
                                                             <div class="flex justify-center gap-3">
@@ -468,7 +468,7 @@
                                                         <h3
                                                             class="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">
                                                             Apakah anda yakin menghapus data dari ID
-                                                            {{ $currentFoto->id }}?
+                                                            {{ $currentfoto->id }}?
                                                         </h3>
                                                         <form wire:submit.prevent="deleteFoto">
                                                             <div class="flex justify-center gap-3">
@@ -590,7 +590,7 @@
                                                         <h3
                                                             class="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">
                                                             Apakah anda yakin menghapus data dari ID
-                                                            {{ $currentFoto->id }}?
+                                                            {{ $currentfoto->id }}?
                                                         </h3>
                                                         <form wire:submit.prevent="deleteFoto">
                                                             <div class="flex justify-center gap-3">
@@ -712,7 +712,7 @@
                                                         <h3
                                                             class="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">
                                                             Apakah anda yakin menghapus data dari ID
-                                                            {{ $currentFoto->id }}?
+                                                            {{ $currentfoto->id }}?
                                                         </h3>
                                                         <form wire:submit.prevent="deleteFoto">
                                                             <div class="flex justify-center gap-3">
@@ -834,7 +834,7 @@
                                                         <h3
                                                             class="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">
                                                             Apakah anda yakin menghapus data dari ID
-                                                            {{ $currentFoto->id }}?
+                                                            {{ $currentfoto->id }}?
                                                         </h3>
                                                         <form wire:submit.prevent="deleteFoto">
                                                             <div class="flex justify-center gap-3">
@@ -957,7 +957,7 @@
                                                         <h3
                                                             class="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">
                                                             Apakah anda yakin menghapus data dari ID
-                                                            {{ $currentFoto->id }}?
+                                                            {{ $currentfoto->id }}?
                                                         </h3>
                                                         <form wire:submit.prevent="deleteFoto">
                                                             <div class="flex justify-center gap-3">

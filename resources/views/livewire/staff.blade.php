@@ -117,9 +117,10 @@
                                                 <div class="flex items-center gap-3">
                                                     <div class="avatar">
                                                         <div class="mask mask-squircle h-12 w-12">
-                                                            <a href="{{ asset('storage/staff/' . $mgmt->foto) }}"><img src="{{ asset('storage/foto/' . $mgmt->foto) }}"
-                                                                alt="{{ $mgmt->nama }}" /></a>
-                                                            
+                                                            <a href="{{ asset('storage/staff/' . $mgmt->foto) }}"><img
+                                                                    src="{{ asset('storage/staff/' . $mgmt->foto) }}"
+                                                                    alt="{{ $mgmt->nama }}" /></a>
+
                                                         </div>
                                                     </div>
                                                     <div>
@@ -135,17 +136,19 @@
                                             </td>
                                             <td>{{ $mgmt->sub_posisi }}</td>
                                             <th>
-                                                <button class="btn btn-outline btn-warning"><a
-                                                        href="{{ route('editstaff', $mgmt->id) }}">Edit</a></button>
-                                                <button wire:click="showModal({{ $mgmt->id }})"
+                                                <button class="btn btn-outline btn-warning">
+                                                    <div><a href="{{ route('editstaff', $mgmt->id) }}">Edit</a></div>
+                                                </button>
+                                                <button wire:click="showModal({{ $mgmt->id }}, 'mgmt')"
                                                     class="btn btn-outline btn-error" type="button">
                                                     Hapus
                                                 </button>
+
                                             </th>
                                         </tr>
 
-                                        @if ($modalVisible)
-                                            <div id="popup-modal" tabindex="-1"
+                                        @if ($modalVisiblemgmt)
+                                            <div id="popup-modal" wire:key="mgmt-{{ $mgmt->id }}" tabindex="-1"
                                                 class="fixed top-0 right-0 left-0 z-50 flex items-center justify-center w-full h-screen bg-black bg-opacity-50">
                                                 <div
                                                     class="relative w-full max-w-md max-h-full bg-white rounded-lg shadow dark:bg-gray-700">
@@ -200,7 +203,8 @@
                                             stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
                                     </svg>
                                 </div>
-                                <input type="search" id ="searchtermtentor" name="searchtermtentor" wire:model.defer="searchtermtentor"
+                                <input type="search" id ="searchtermtentor" name="searchtermtentor"
+                                    wire:model.defer="searchtermtentor"
                                     class="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                     placeholder="Cari Staff Tenaga Tutor Disini .." required />
                                 <button type="submit"
@@ -233,9 +237,11 @@
                                                     <div class="flex items-center gap-3">
                                                         <div class="avatar">
                                                             <div class="mask mask-squircle h-12 w-12">
-                                                                <a href="{{ asset('storage/staff/' . $tentor->foto) }}"> <img src="{{ asset('storage/foto/' . $tentor->foto) }}"
-                                                                    alt="{{ $tentor->nama }}" /></a>
-                                                               
+                                                                <a
+                                                                    href="{{ asset('storage/staff/' . $tentor->foto) }}">
+                                                                    <img src="{{ asset('storage/staff/' . $tentor->foto) }}"
+                                                                        alt="{{ $tentor->nama }}" /></a>
+
                                                             </div>
                                                         </div>
                                                         <div>
@@ -249,17 +255,20 @@
                                                 </td>
                                                 <td>{{ $tentor->sub_posisi }}</td>
                                                 <th>
-                                                    <button class="btn btn-outline btn-warning"><a
-                                                            href="{{ route('editstaff', $tentor->id) }}">Edit</a></button>
-                                                    <button wire:click="showModal({{ $tentor->id }})"
+                                                    <button class="btn btn-outline btn-warning">
+                                                        <div><a href="{{ route('editstaff', $tentor->id) }}">Edit</a>
+                                                        </div>
+                                                    </button>
+                                                    <button wire:click="showModal({{ $tentor->id }}, 'tentor')"
                                                         class="btn btn-outline btn-error" type="button">
                                                         Hapus
                                                     </button>
                                                 </th>
                                             </tr>
 
-                                            @if ($modalVisible)
-                                                <div id="popup-modal" tabindex="-1"
+                                            @if ($modalVisibletentor)
+                                                <div id="popup-modal" wire:key="tentor-{{ $tentor->id }}"
+                                                    tabindex="-1"
                                                     class="fixed top-0 right-0 left-0 z-50 flex items-center justify-center w-full h-screen bg-black bg-opacity-50">
                                                     <div
                                                         class="relative w-full max-w-md max-h-full bg-white rounded-lg shadow dark:bg-gray-700">
@@ -308,3 +317,7 @@
         </div>
 
     </div>
+    <script>
+        console.log('@this.get('
+            modalVisiblemgmt ')');
+    </script>

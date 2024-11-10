@@ -45,7 +45,7 @@
                     <li>
                         <button wire:click="switchPage('sejarah-table')">
                             <a href="#"
-                                class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                                class="flex items-center p-2 text-white-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
 
                                 <span class="flex-1 ms-3 whitespace-nowrap">Sejarah </span>
 
@@ -56,7 +56,7 @@
                     <li>
                         <button wire:click="switchPage('visimisi-table')">
                             <a href="#"
-                                class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                                class="flex items-center p-2 text-white-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
 
                                 <span class="flex-1 ms-3 whitespace-nowrap">Visi dan Misi</span>
 
@@ -135,7 +135,7 @@
                 <div class="p-4 sm:p-6 lg:p-8 mx-auto w-full">
                     <form wire:submit.prevent="updateVisimisi">
                         <div
-                            class="w-full mb-4 border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-700 dark:border-gray-600">
+                            class="w-full mb-4 border border-gray-200 rounded-lg bg-gray-50">
                             <div x-data="summernoteInit_visi()" x-init="initializeSummernote_visi()" wire:ignore class="mb-4">
                                 <textarea id="visi" wire:model.defer="visi">
                                     {{ $profil->visi }}
@@ -143,7 +143,7 @@
                             </div>
                         </div>
                         <div
-                            class="w-full mb-4 border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-700 dark:border-gray-600">
+                            class="w-full mb-4 border border-gray-200 rounded-lg bg-gray-50">
                             <div x-data="summernoteInit_misi()" x-init="initializeSummernote_misi()" wire:ignore class="mb-4">
                                 <textarea id="misi" wire:model.defer="misi">
                                     {{ $profil->misi }}
@@ -164,7 +164,7 @@
 
                     <form wire:submit.prevent="updateUnggulan">
                         <div
-                            class="w-full mb-4 border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-700 dark:border-gray-600">
+                            class="w-full mb-4 border border-gray-200 rounded-lg bg-gray-50">
                             <div x-data="summernoteInit_unggulan()" x-init="initializeSummernote_unggulan()" wire:ignore class="mb-4">
                                 <textarea id="unggulan" wire:model.defer="unggulan">
                                     {{ $profil->unggulan }}
@@ -183,28 +183,28 @@
                 <div class="p-4 sm:p-6 lg:p-8 mx-auto w-full">
                     <form wire:submit.prevent="updateSocialMedia">
                         <div
-                            class="w-full mb-4 border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-700 dark:border-gray-600">
-                            <div class=" flex justify-start px-3 py-2 border-b dark:border-gray-600">
+                            class="w-full mb-4 border border-gray-200 rounded-lg bg-gray-50">
+                            <div class=" flex justify-start px-3 py-2 border-b">
                                 <div type="text" class=" flex  just p-2 text-gray-500 sm:ms-auto ">
                                     Social Media
                                 </div>
                             </div>
                             <div class="m-5">
                                 <label for="whatsapp_link"
-                                    class=" font-bold block mb-2 text-sm  text-gray-900 dark:text-white">Link
+                                    class=" font-bold block mb-2 text-sm  text-gray-900 ">Link
                                     Instagram</label>
                                 <input wire:model.defer="instagram_link" type="whatsapp_link" id="whatsapp_link"
                                     name="whatsapp_link" value="{{ $profil->instagram_link }}"
-                                    class=" bg-white shadow-sm border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
+                                    class=" bg-white shadow-sm border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
                                     required />
                             </div>
                             <div class="m-5">
                                 <label for="whatsapp_link"
-                                    class="block mb-2 text-sm font-bold text-gray-900 dark:text-white">Link
+                                    class="block mb-2 text-sm font-bold text-gray-900 ">Link
                                     Whatsapp</label>
                                 <input wire:model.defer="whatsapp_link" type="whatsapp_link" id="whatsapp_link"
                                     name="whatsapp_link" value="{{ $profil->whatsapp_link }}"
-                                    class="shadow-sm bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
+                                    class="shadow-sm bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
                                     required />
                             </div>
                         </div>
@@ -221,16 +221,16 @@
                 <div class="p-4 sm:p-6 lg:p-8 mx-auto w-full">
                     <form wire:submit.prevent="updateAlamat">
                         <div
-                            class="w-full mb-4 border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-700 dark:border-gray-600">
-                            <div class=" flex justify-start px-3 py-2 border-b dark:border-gray-600">
+                            class="w-full mb-4 border border-gray-200 rounded-lg bg-gray-50 ">
+                            <div class=" flex justify-start px-3 py-2 border-b">
                                 <div type="text" class=" flex  just p-2 text-gray-500 sm:ms-auto ">
                                     Alamat
                                 </div>
                             </div>
-                            <div class="px-4 py-2 bg-white rounded-b-lg dark:bg-gray-800">
+                            <div class="px-4 py-2 bg-white rounded-b-lg">
                                 <label for="editor" class="sr-only">Alamat</label>
                                 <textarea id="editor" rows="8" wire:model.defer="alamat"
-                                    class="block w-full px-0 text-sm text-gray-800 bg-white border-0 dark:bg-gray-800 focus:ring-0 dark:text-white dark:placeholder-gray-400"
+                                    class="block w-full px-0 text-sm text-gray-800 bg-white border-0"
                                     required>{{ $profil->alamat }}</textarea>
                             </div>
                         </div>
