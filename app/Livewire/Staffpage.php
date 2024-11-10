@@ -77,6 +77,11 @@ class Staffpage extends Component
         Debugbar::info('Modal Visible (tentor)', $this->modalVisibletentor);
     }
 
+    public function refreshComponent()
+    {
+        $this->reset();
+    }
+
     public function hideModal()
     {
         $this->modalVisiblemgmt = false;
